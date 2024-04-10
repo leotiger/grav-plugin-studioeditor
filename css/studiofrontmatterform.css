@@ -1,0 +1,149 @@
+IMG.pasteIMG {
+	display:none;
+}
+IMG.pasteAttributesIMG {
+  display:none;
+}
+
+IMG.pasteChildnodesIMG {
+  display:none;
+}
+
+.red {
+	color:red;
+}
+
+.blue {
+	color:blue;
+}
+
+.gray {
+	color:gray;
+}
+
+
+
+.clickable {
+	color:#748FB2;
+	cursor:pointer;
+}
+.clickable:hover {
+  background:#ddd;
+}
+
+
+SPAN.sampleSPAN {
+	display:none;
+}
+
+DIV#jsonFormDataDIV {
+	border:1px solid #000;
+}
+
+
+TEXTAREA {
+	color:#000;
+}
+
+TEXTAREA.rightTEXTAREA {
+  height:16px;
+  margin:0;
+  border:1px solid #748FB2;
+  width:200px;
+}
+TEXTAREA.expandedTEXTAREA {
+  height:180px;
+  width:360px;
+}
+
+INPUT {	
+	border:1px solid #748FB2;
+	margin-bottom:2px;
+	color:#000;
+}
+INPUT.buttonINPUT {
+  color:#748FB2;
+  cursor:pointer;
+}
+
+INPUT.checkbox {	
+  border:none;
+}
+INPUT.leftINPUT {
+  background:#ddf;
+}
+INPUT.readonlyINPUT {
+  color:#999;
+}
+
+LI.activeLI {
+	border:1px solid orange;
+}
+
+
+
+DIV#messageDIV {
+	position:absolute;
+	width:200px;
+	padding:12px;
+}
+DIV.messageCloseDIV {
+  background:#000;
+}
+DIV.messageAutoCloseDIV {
+  background:#999;
+}
+DIV#messageDIV IMG#messageCloseIMG {
+  float:right;
+  cursor:pointer;
+}
+
+DIV#messageContentDIV,
+DIV#messageContentDIV B {
+  color:#fff;
+}
+
+INPUT#removeAllDeletedINPUT {
+  background:red;
+  color:#fff;
+}
+DIV.IDIV {
+	width:11px;
+	height:11px;
+	float:left;
+	margin:1px;
+}
+
+DIV.IDIV_down {
+  background:url(/img/je/down.gif);
+}
+DIV.IDIV_up {
+  background:url(/img/je/up.gif);
+}
+DIV.IDIV_copy {
+  background:url(/img/je/copy.gif);
+}
+DIV.IDIV_close {
+  background:url(/img/je/close.gif);
+}
+
+
+DIV.lIDIV {
+	width:13px;
+	height:12px;
+	float:left;
+	margin:1px;
+}
+
+DIV.lIDIV_blank {
+  background:url(/img/je/blank.gif);
+}
+
+
+DIV.xcIDIV {
+  background:url(/img/je/collapse.gif);
+}
+
+DIV.xcIDIV_collapsed {
+  background:url(/img/je/expand.gif);
+}

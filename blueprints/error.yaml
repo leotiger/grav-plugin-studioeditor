@@ -1,0 +1,32 @@
+extends@: default
+title: PLUGIN_ADMIN.MODULAR
+
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+
+            header.content.items:
+              type: ignore
+
+            header.content.order.by:
+              type: ignore
+
+            header.content.order.dir:
+              type: ignore
+
+            header.process:
+              type: ignore
+
+              
+        advanced:
+          ordering@: 6
+          fields:
+            overrides:
+              type: ignore

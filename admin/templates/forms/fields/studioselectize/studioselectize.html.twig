@@ -1,0 +1,12 @@
+<div class="form-field grid">
+  <div class="form-label block size-1-3">
+    <label>
+      <span class="hint--bottom" data-hint="{{ hint|tu }}">{{ label|tu }}</span>
+    </label>
+  </div>
+  <div class="form-data block size-2-3" data-grav-selectize="{{ (field.selectize is defined ? field.selectize|merge({'create': true}) : {'create': true})|json_encode()|e('html_attr') }}" data-grav-field="selectize" data-grav-disabled="" data-grav-default="null">
+    <div class="form-input-wrapper large ">
+      <input name="{{studioselectize}}" value="{{ selectvals|join(',') }}" class="fancy selectized" placeholder="{{ placeholder|tu }}" tabindex="-1" style="display: none;" type="text">
+    </div>
+  </div>
+</div>

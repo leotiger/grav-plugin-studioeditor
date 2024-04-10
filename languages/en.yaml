@@ -1,0 +1,142 @@
+PLUGIN_STUDIOEDITOR:
+  STUDIOEDITOR_TAB: 'StudioEditor'
+  MATHJAX_TITLE: 'MathJax'
+  MATHJAX_PROCESS: 'MathJax process'
+  MATHJAX_WEIGHT: "Order of execution"
+  MATHJAX_WEIGHT_HELP: "To process the page contents right after *SmartyPants* use negative values."
+  MATHJAX_BUILTIN_CSS: "Use built in CSS"
+  MATHJAX_BUILTIN_JS: "Use built in MathJax configuration"
+  MATHJAX_URL: "MathJax.js URL"
+  MATHJAX_URL_HELP: "Enter the Mathjax URL here or leave it unchanged to use the one provided by the plugin"
+  MARKDOWN_EXTRAS: 'Markdown Extras'
+  MARKDOWN_ALIGN: 'Markdown Block Align'
+  MARKDOWN_NOTICES: 'Markdown Notices'
+  MARKDOWN_EXTRAS_CSS: 'Load extras css'
+  MARKDOWN_NOTICES_PROCESS: 'Process notices'
+  MARKDOWN_BLOCKALIGN_PROCESS: 'Process alignment'  
+  PAGE_TITLE: 'Page Title'
+  PAGE_TITLE_HINT: 'Please provide a title for your page'  
+  PAGE_AUTHOR: 'Page Author'
+  PAGE_AUTHOR_HINT: "Please provide the author's name"
+  PAGE_SLIDER: 'View media in slider'
+  PAGE_SLIDER_HINT: "Show media in slider if studio template for this page supports slider"  
+  PAGE_SLIDER_FORCE: 'Show slider in single view'
+  PAGE_SLIDER_FORCE_HINT: "Show slider without overlay"  
+  PAGE_BGCOLOR: 'Page background color'
+  PAGE_BGCOLOR_HINT: "Set the background color for your page"    
+  PAGE_FONTCOLOR: 'Page font color'
+  PAGE_FONTCOLOR_HINT: "Set the main font color for your page"      
+  PAGE_DATE: 'Publication date'
+  PAGE_DATE_HINT: "Set the publication date"      
+  PAGE_SHARING: 'Allow sharing'
+  PAGE_SHARING_HINT: 'Add sharing icons to the page'
+  PAGE_COMMENTS: 'Allow comments'
+  PAGE_COMMENTS_HINT: 'Allow visitor comments'
+  PAGE_RESIZE_IMAGES: 'Clear image variations'
+  PAGE_RESIZE_IMAGES_HINT: 'Restore orginal images and clear variations'
+  FRONTMATTER: 'Frontmatter'
+  GALLERY: 'Gallery'
+  PAGE_GALLERYFILTER: 'Gallery filters'
+  PAGE_GALLERYFILTER_HINT: 'Define filters for gallery overviews'
+  GALLERY_TITLE: 'Media Title'
+  GALLERY_UPLOAD: Upload page and gallery media
+  GALLERY_SUMMARY: 'Media Summary'
+  GALLERY_MEDIA: 'Media item'
+  GALLERY_ALT: 'Media alt text'
+  GALLERY_MEDIAURL: Media link (youtube, vimeo)
+  GALLERY_MEDIAURL_HELP: If you specify an external media it will take precedence over internal media items
+  GALLERY_CHUNKS: Description
+  GALLERY_CHUNK: Line
+  GALLERY_TEXTNODE: Text node
+  PAGE_BGVIDEO: Background video
+  PAGE_BGIMAGE: Background image
+  PAGE_BGVIDEO_HINT: "Background video has to be local. You have to prepare three versions: a mp4, a webm and a ogv version"
+  PAGE_BGIMAGE_HINT: You may select a background image for your page
+  YES: Yes
+  NO: No
+  COVER_TITLE: Cover title
+  COVER_IMAGE: Cover image
+  COVER_ALT: Cover alt
+  COVER_SUMMARY: Cover description
+  COVER_TITLE_HINT: The title for your cover image. The template may display this title
+  COVER_IMAGE_HINT: Cover image
+  COVER_ALT_HINT: The alternative text to show if image display is not available or when a user hovers over the image
+  COVER_SUMMARY_HINT: A description for you cover media. The template may show this information
+  COVER_TREATMENT: Cover Filter
+  COVER_TREATMENT_HINT: Apply filter to cover image
+  COVER_TREATMENT_NONE: No treatment
+  COVER_TREATMENT_NEGATIVE: Negative
+  COVER_TREATMENT_SEPIA: Sepia
+  COVER_TREATMENT_EMBOSS: Emboss
+  COVER_TREATMENT_EDGE: Edge
+  COVER_TREATMENT_GRAYSCALE: Grayscale
+  FONT_SIZE: Font size
+  IMAGE_QUALITY: Image quality
+  MEDIA_WIDTH: Media width
+  FONT_SIZE_HINT: Font size in em units. Please use . for values like 0.85 or 1.2
+  IMAGE_QUALITY_HINT: Image quality for jpeg images (.jpg, .jpeg). Please specify something between 10 and 100. 100 means best quality.
+  MEDIA_WIDTH_HINT: The maximum width of the media you offer.
+  CREDITS: About
+  CREDIT_LIST: List of credits you want to mention
+  CREDIT_TITLE: Title
+  CREDIT_URL: Reference url
+  CREDIT_IMAGE: A image representation
+  CREDIT_CHUNKS: Descriptive text portions for the credit
+  LINKS: LINKS
+  LINK_LIST: List of related links
+  LINK_TITLE: Title
+  LINK_URL: Link url
+  LINK_IMAGE: A image for the link
+  LINK_CHUNKS: Descriptive text portions for the credit
+  NEWS_SECTION: Home news section
+  STUDIO_SECTION: Home studio section
+  TESTIMONIALS_SECTION: Home testimonials section  
+  TESTIMONIALS: Testimonials
+  TESTIMONIALS_LIST: A list of quotes for your homepage
+  TESTIMONIAL_TITLE: The quote reference
+  TESTIMONIAL_QUOTE: The quote made
+  CAPTCHA_NOT_VALID: Captcha not valid!
+  OPACITY: Opacity (Shine through)
+  OPACITY_HINT: Please specify a value between 0 and 1, e.g. 0.75 or 0 or 0.9. Please use dot (.) as decimal separator. 0 = completely transparent, 1 = opaque.
+  RESIZE_IMAGES: Image Resizer
+  CREDITS_THIRDPARTY: Third party stuff
+  CREDITS_THIRDPARTY_TEXT: "<a href='http://stackedit.io' target='_blank'>StackEdit</a><br /><a href='https://github.com/fredrikekelund/grav-plugin-resize-images' target='_blank'>Resize Images</a><br />Plugins related with markdown and a lot more..."
+  CREDITS_NOTES: Support and requests
+  CREDITS_NOTES_TEXT: "You can email me at <a href='mailto:uli.hake@gmail.com'>Uli Hake</a>"
+  SLIDER: Slider
+  SLIDER_LIST: Slider entries
+  SLIDER_TITLE: Title
+  SLIDER_CONTENT: Content
+  SLIDER_LINK: Link
+  SLIDER_IMAGE: Image
+  SLIDER_VIDEO: Video url
+  SLIDER_FONTCOLOR: 'Slide font color'
+  SLIDER_FONTCOLOR_HINT: "Set the main font color for your slide"      
+  PAGE_FULLWIDTH: Page full width
+  MUSINGS_ROUTE: Route to musings
+  EXPOSITION_ROUTE: Route to exposition
+  MUSINGS_ROUTE_HELP: Set the route to musings overview
+  EXPOSITION_ROUTE_HELP: Set the route to expositions overview
+  STUDIOEDITOR: Studio Editor
+  DATA_TYPES: Data Types
+  ITEMS_LIST: Items List
+  ITEMS: Items
+  ITEM_DETAILS: Item Details
+  PAGE_RESET_CONTENT: Reset content
+  PAGE_RESET_CONTENT_HELP: Reset content for all languages using default language content as source. (This will overwrite content in other languages, use with care)
+  PAGE_RESET_GALLERY: Reset gallery
+  PAGE_RESET_GALLERY_HELP: Reset gallery entries for all languages using default language content as source. (This will overwrite gallery entries in other languages, use with care)
+  PAGE_RESET_COVER: Reset cover
+  PAGE_RESET_COVER_HELP: Reset gallery cover for all languages using default language content as source. (This will overwrite the gallery cover in other languages, use with care)
+  TAB_HELP: Help
+  TAB_HELP_EDITOR: Editor
+  TAB_HELP_EDITOR_01_LABEL: Contextual help
+  TAB_HELP_EDITOR_01_CONTENT: "Please see what the labels offer. Many of them expand contextual help when you hover over the help icon with the mouse cursor."
+  TAB_HELP_EDITOR_02_LABEL: Issues
+  TAB_HELP_EDITOR_02_CONTENT: "If you save and the active tab is not the content tab, the editor may not be initialized correctly after reload. In this case simply save or reload with CTRL+R again with the content tab activated."
+  TAB_HELP_EDITOR_03_LABEL: Shortcuts
+  TAB_HELP_EDITOR_03_CONTENT: "The editor supports many handy shortcuts. Inside of the editor you can use the standard shortcuts for bold, italic, e.g. CTRL+B, CTRL+I. If the focus is outside of the editor you will have to use CTRL+SHIFT+SHORTCODE, e.g. CTRL+SHIFT+R. The shortcode combinations with shift work inside of the editor as well.'."
+  TAB_HELP_EXTENT: Extent 
+  TAB_HELP_EXTENT_01_LABEL: Extent your theme blueprints
+  TAB_HELP_EXTENT_01_CONTENT: "Studioeditor includes two special form field types:\n\n- studioeditor\n- studiopagemedia\n\nThese form fields can be used for the content and upload field of a given blueprint. Please be aware that you cannot place more than one **studioeditor** inside of your blueprint.\n\nThe Studioeditor plugin extends the default blueprint already. This means, all your theme blueprints based on or extending the default blueprint already include the **studioeditor** editor and the **studiopagemedia file picker**."
+  

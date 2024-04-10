@@ -1,0 +1,29 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set musingfilters = theme_config.musing.filters %}
+{% set parentname = field.name %}
+
+    {% set value = array(data.value('header.selection')|default([])) %}
+	
+    {# set sub_filters = musingfilters|default([]) #}
+	{% if musingfilters is iterable %}
+		{# set sub_filters = attribute(musingfilters, name)|default([])|keys #}
+		{% set sub_filters = musingfilters|default([]) %}
+	{% else %}
+		{% set sub_filters = array(musingfilters|split(',')|default([])) %}	
+	{% endif %}
+	
+    {% set list = []|merge(sub_filters)|merge(value)|array_unique %}
+
+    {% set field = {
+        type: 'select',
+        classes: 'fancy create',
+        label: name|capitalize,
+        name: field.name,
+        multiple: true,
+        options: list,
+        style: field.style,
+        selectize: {
+            create: true
+        }
+    } %}
+    {% include ['forms/fields/select/select.html.twig'] %}

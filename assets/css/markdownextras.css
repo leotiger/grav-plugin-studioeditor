@@ -1,0 +1,41 @@
+.notices {
+    padding: 1px 1px 1px 30px;
+    margin: 15px 0;
+}
+
+.notices p {
+	/*display: table-cell;*/
+}
+
+.notices.yellow {
+    border-left: 10px solid #f0ad4e;
+    color: #df8a13;
+}
+
+.notices.red {
+    border-left: 10px solid #d9534f;
+    color: #b52b27;
+}
+
+.notices.blue {
+    border-left: 10px solid #5bc0de;
+    color: #28a1c5;
+}
+
+.notices.green {
+    border-left: 10px solid #5cb85c;
+    color: #3d8b3d;
+}
+
+.external-services {
+	width: 100%;
+	display: block;
+}
+
+.service-vimeo {
+	min-height: 400px;
+}
+
+.external-services iframe {
+	min-height: 400px;
+}

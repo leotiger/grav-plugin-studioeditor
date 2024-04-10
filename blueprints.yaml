@@ -1,0 +1,198 @@
+name: Studio Editor
+version: 1.1.1
+description: A Pagedown Editor for GRAV
+icon: database
+author:
+  name: Uli Hake
+  email: uli.hake@gmail.com
+  url: http://www.cal-talaia.cat
+keywords: admin, plugin, manager, panel, stackedit, content management
+
+dependencies:
+  - { name: admin, version: '~1.10' }
+  - { name: smartypants, version: '~2.5' }
+  - { name: prism-highlight, version: '~3.0' }  
+  - { name: webp, version: '~1.4' }    
+  
+form:
+  validation: loose
+
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      class: subtle
+
+      fields:
+        studioeditor:
+          type: tab
+          title: PLUGIN_STUDIOEDITOR.STUDIOEDITOR_TAB
+
+          fields:
+            enabled:
+              type: toggle
+              label: PLUGIN_ADMIN.PLUGIN_STATUS
+              highlight: 1
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            pageblueprints:
+              type: list
+              label: Synchronize page translations
+              help: Add blueprints for pages that allow for sychronization of shared values between translations, e.g. shoppingcart_product.md
+              fields:
+                .blueprint:
+                  type: text
+                
+
+        imageresizer:
+          type: tab
+          title: PLUGIN_STUDIOEDITOR.RESIZE_IMAGES
+
+          fields:
+            adapter:
+              type: select
+              label: Image editing module
+              help: Imagick will produce better results, but isn't available in all environments
+              default: gd
+              options:
+                imagick: Imagick
+                gd: GD
+            sizes:
+              type: list
+              label: Image sizes
+              btnLabel: Add image size
+
+              fields:
+                .width:
+                   type: number
+                   label: Width
+                   placeholder: 1280
+                   min: 1
+                .quality:
+                  type: number
+                  label: JPEG quality
+                  placeholder: 82
+                  min: 0
+                  max: 100
+                  default: 82
+
+        mathjax:
+          type: tab
+          title: PLUGIN_STUDIOEDITOR.MATHJAX_TITLE
+
+          fields:
+            mathjax_active:
+              type: toggle
+              label: PLUGIN_STUDIOEDITOR.MATHJAX_PROCESS
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
+              validate:
+                type: bool		  
+            mathjax_built_in_css:
+              type: toggle
+              label: PLUGIN_STUDIOEDITOR.MATHJAX_BUILTIN_CSS
+              default: 1
+              highlight: 1			  
+              options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
+              validate:
+                type: bool
+
+            mathjax_built_in_js:
+              type: toggle
+              label: PLUGIN_STUDIOEDITOR.MATHJAX_BUILTIN_JS
+              default: 1
+              highlight: 1			  
+              options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
+              validate:
+                type: bool
+
+            mathjax_weight:
+              type: text
+              size: x-small
+              label: PLUGIN_STUDIOEDITOR.MATHJAX_WEIGHT
+              default: -5
+              help: PLUGIN_STUDIOEDITOR.MATHJAX_WEIGHT_HELP
+              validate:
+                type: int
+                min: -100
+                max: 100
+
+            mathjax_url:
+              type: text
+              label: PLUGIN_STUDIOEDITOR.MATHJAX_URL
+              default: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+              placeholder: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+              help: PLUGIN_STUDIOEDITOR.MATHJAX_URL_HELP
+
+        notices:
+          type: tab
+          title: PLUGIN_STUDIOEDITOR.MARKDOWN_EXTRAS
+
+          fields:
+            notices_active:
+              type: toggle
+              label: PLUGIN_STUDIOEDITOR.MARKDOWN_NOTICES_PROCESS
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
+              validate:
+                type: bool		  		  
+            blockalign_active:
+              type: toggle
+              label: PLUGIN_STUDIOEDITOR.MARKDOWN_BLOCKALIGN_PROCESS
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
+              validate:
+                type: bool		  		  
+            extras_built_in_css:
+              type: toggle
+              label: PLUGIN_STUDIOEDITOR.MARKDOWN_EXTRAS_CSS
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
+              validate:
+                type: bool
+        extent:
+          type: tab
+          title: PLUGIN_STUDIOEDITOR.TAB_HELP_EXTENT
+          fields:
+            extent01:
+              type: display
+              size: large
+              label: PLUGIN_STUDIOEDITOR.TAB_HELP_EXTENT_01_LABEL
+              markdown: true
+              content: PLUGIN_STUDIOEDITOR.TAB_HELP_EXTENT_01_CONTENT                        
+        credits:
+          type: tab
+          title: PLUGIN_STUDIOEDITOR.CREDITS
+
+          fields:
+            thirdparty:
+              type: spacer
+              title: PLUGIN_STUDIOEDITOR.CREDITS_THIRDPARTY
+              text: PLUGIN_STUDIOEDITOR.CREDITS_THIRDPARTY_TEXT
+              underline: true
+            notes:
+              type: spacer
+              title: PLUGIN_STUDIOEDITOR.CREDITS_NOTES
+              text: PLUGIN_STUDIOEDITOR.CREDITS_NOTES_TEXT
+              underline: true

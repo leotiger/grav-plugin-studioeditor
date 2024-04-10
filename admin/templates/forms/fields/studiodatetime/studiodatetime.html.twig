@@ -1,0 +1,27 @@
+{% set dvalue = (dvalue is null ? "" : dvalue) %}
+{% set default_php_dateformat = admin.guessDateFormat(dvalue) %}
+{% set php_dateformat = admin.page.dateformat ?: config.system.pages.dateformat.default ?: default_php_dateformat %}
+{% set js_dateformat = admin.dateformatToMomentJS(php_dateformat) %}
+{% set dvalue = (dvalue is null ? dvalue : dvalue|date(php_dateformat)) %}
+
+<div class="form-field grid">
+  <div class="form-label block size-1-3">
+    <label>
+      <span class="hint--bottom" data-hint="{{hint|tu}}">{{label|tu}}</span>
+    </label>
+  </div>
+
+  <div class="form-input-wrapper datetime-picker-wrapper {{ field.size }}">
+      <input
+              id="{{studiodate}}"
+              value="{{ dvalue|raw|join(', ') }}"
+              {% block input_attributes %}
+                  type="text"
+                  data-grav-datetime="{{ {'format': js_dateformat} | json_encode | e('html_attr') }}"
+              {% endblock %}
+      />
+      <span class="field-icons">
+          <i class="fa fa-fw fa-calendar"></i>
+      </span>
+  </div>
+</div>

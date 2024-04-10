@@ -1,0 +1,23 @@
+<div class="form-field grid">
+  <div class="form-label block size-1-3">
+    <label>
+      <span class="hint--bottom" data-hint="{{hint|tu}}">{{label|tu}}</span>
+    </label>
+  </div>
+  <div class="form-data block size-2-3" data-grav-field="toggle" data-grav-disabled="" data-grav-default="null" data-grav-field-name="data[page][{{studioonoff}}]">
+    <div class="switch-toggle switch-grav  switch-2">
+      {% if onoffval %}
+        <input value="1" id="toggle_page.{{studioonoff}}1" name="data[page][{{studioonoff}}]" class="highlight" type="radio" checked="checked">
+        <label for="toggle_page.{{studioonoff}}1">Yes</label>                              
+        <input value="0" id="toggle_page.{{studioonoff}}0" name="data[page][{{studioonoff}}]" class="" type="radio">
+        <label for="toggle_page.{{studioonoff}}0">No</label>
+      {% else %}
+        <input value="1" id="toggle_page.{{studioonoff}}1" name="data[page][{{studioonoff}}]" class="" type="radio">
+        <label for="toggle_page.{{studioonoff}}1">Yes</label>                              
+        <input value="0" id="toggle_page.{{studioonoff}}0" name="data[page][{{studioonoff}}]" class="highlight" checked="checked" type="radio">
+        <label for="toggle_page.{{studioonoff}}0">No</label>          
+      {% endif %}
+      <a></a>
+    </div>
+  </div>
+</div>    

@@ -1,0 +1,29 @@
+<div class="form-field grid">
+  <div class="form-label block size-1-3">
+    <label>
+      <span class="hint--bottom" data-hint="{{hint|tu}}">{{label|tu}}</span>
+    </label>
+  </div>
+  
+  {% set thecolor = colorval is defined ? '#' ~ colorval : colorfallback %}
+  {% set pattern = '^#([a-fA-F0-9]{6})|(rgba\\(\\s*(0|[1-9]\\d?|1\\d\\d?|2[0-4]\\d|25[0-5])\\s*,\\s*(0|[1-9]\\d?|1\\d\\d?|2[0-4]\\d|25[0-5])\\s*,\\s*(0|[1-9]\\d?|1\\d\\d?|2[0-4]\\d|25[0-5])\\s*,\\s*((0.[0-9]+)|(1.00)|1.0|1)\\s*\\))$' %}
+  <div class="form-list-wrapper" data-type="collection">
+      <div class="g-colorpicker">
+          <input
+                  data-grav-colorpicker="{{ {update: '.g-colorpicker-preview-wrap .g-colorpicker-preview'}|json_encode|e('html_attr') }}"
+                  {# required attribute structures #}
+                  value="{{ thecolor|raw|join(', ') }}"
+                  type="text"
+                  id="{{studiocolor}}"
+                  {# input attribute structures #}
+                  {% block input_attributes %}
+                      pattern="{{ field.validate.pattern|default(pattern)|raw }}"
+                  {% endblock %}
+          />
+          <div class="g-colorpicker-preview-wrap">
+              <div class="g-colorpicker-preview" style="background-color: {{ thecolor|e }}"></div>
+          </div>
+      </div>
+  </div>
+  
+</div>    

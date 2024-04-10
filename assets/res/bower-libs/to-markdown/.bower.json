@@ -1,0 +1,13 @@
+{
+  "name": "to-markdown",
+  "homepage": "https://github.com/benweet/to-markdown",
+  "_release": "28ffe20ede",
+  "_resolution": {
+    "type": "branch",
+    "branch": "jquery",
+    "commit": "28ffe20ede0e6b3b6af8e4f89eff494938b7412d"
+  },
+  "_source": "https://github.com/benweet/to-markdown.git",
+  "_target": "jquery",
+  "_originalSource": "https://github.com/benweet/to-markdown.git"
+}

@@ -1,0 +1,26 @@
+#admin-main ul .collection-actions .button {
+	background: #0082ba !important;
+}
+
+#admin-main ul .CodeMirror-code {
+	background: #cccccc;
+	color: #444;
+}
+
+.CodeMirror-selectedtext {
+	background: #3366AA;
+}
+
+.CodeMirror-activeline-background {
+	background: #bbbbbb;
+}
+
+.find-replace {
+    right: 0px !important;
+    z-index: 9999 !important;
+}
+
+.extension-preview-buttons .dropdown-menu {
+  background-color: darkgray !important;
+  font-weight: bold !important;
+}

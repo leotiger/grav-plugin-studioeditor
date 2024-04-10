@@ -1,0 +1,241 @@
+{% if not codemirrorOptions %}
+    {% set codemirrorOptions = {'spellcheck': 'true', 'mode': 'gfm', 'ignore': ['code', 'preview']}|merge(field.codemirror|default({})) %}
+{% endif %}
+
+{% set value = (value is null ? field.default : value) %}
+{% block label %}
+    {% if field.label %}
+        {% set hint = field.help ? 'data-hint="' ~ field.help|tu|raw ~ '"': '' %}
+        <div class="form-label form-field hint--bottom" {{ hint }}>{{ field.label|tu|raw }}</div>
+    {% endif %}
+{% endblock %}
+
+{% block field %}
+    {% if field.name == 'content' %}
+
+    <div class="form-data grav-editor studio-markdown-editor">
+		<div id="editorContainer" class="form-field {{ field.classes|default('') }}">
+			<div id="wmd-panel" class="wmd-panel grav-editor-content is-active">
+				<div class="layout-wrapper-l1">
+					<div class="layout-wrapper-l2">
+						<div class="navbar navbar-default">
+							<div class="navbar-inner">
+								<div class="nav left-space"></div>
+								<div class="nav right-space pull-right"></div>
+								<div class="buttons-dropdown dropdown hide">
+									<div class="nav">
+										<button class="btn btn-success" data-toggle="dropdown"
+											title="Show buttons">
+											<i class="icon-th-large"></i>
+										</button>
+										<div class="dropdown-menu">
+										</div>
+									</div>
+								</div>
+								<ul class="nav left-buttons">
+									<li class="wmd-button-group1 btn-group"></li>
+								</ul>
+								<ul class="nav left-buttons">
+									<li class="wmd-button-group2 btn-group"></li>
+								</ul>
+								<ul class="nav left-buttons">
+									<li class="wmd-button-group3 btn-group"></li>
+								</ul>
+								<ul class="nav left-buttons">
+									<li class="wmd-button-group5 btn-group"></li>
+								</ul>
+								<ul class="nav left-buttons">
+									<li class="studio-editor-button-help"><a class="hint--bottom-left btn btn-success" data-hint="Markdown Syntax"><i class="icon-help-circled"></i></a></li>
+								</ul>
+								<ul class="nav left-buttons">
+								
+									<li class="studio-editor-button-fullscreen"><a class="hint--bottom-left btn btn-success" data-hint="Fullscreen"><i class="icon-resize-full"></i></a></li>
+									<!--
+									<li class="wmd-button-group4 btn-group">
+									
+										<a class="btn btn-success button-open-discussion" title="Comments Ctrl/Cmd+M"><i class="icon-comment-alt"></i></a>
+									</li>
+									-->
+								</ul>
+								<ul class="nav pull-right right-buttons">
+									<li class="offline-status hide">
+										<div class="text-danger">
+											<i class="icon-attention-circled"></i>offline
+										</div>
+									</li>
+									<li class="extension-buttons" style="display:none"></li>
+								</ul>
+								<ul class="nav pull-right title-container">
+									<li><a href="#" class="action-body-document hint--bottom-left" data-hint="Main document"><i
+											class="icon-file"></i><span class="document-part-label"> Main</span></a></li>
+                                                                        <!--
+									<li><a href="#" class="action-intro-document hint--bottom-left" data-hint="Document introduction"><i
+											class="icon-file"></i><span class="document-part-label"> Intro</span></a></li>
+                                                                        -->
+									<li><a href="#" class="action-summary-document hint--bottom-left" data-hint="Document summary"><i
+											class="icon-file"></i><span class="document-part-label"> Summary</span></a></li>
+								
+									<li class="hide"><div class="working-indicator"></div></li>
+									<li class="hide"><a class="btn btn-success file-title-navbar" href="#"
+										title="Rename document"> </a></li>
+									<li class="hide"><div class="input-file-title-container"><input type="text"
+										class="col-sm-4 form-control hide input-file-title"
+										placeholder="Document title" /></div></li>
+								</ul>
+							</div>
+						</div>
+						<div class="layout-wrapper-l3">
+							<textarea
+							  data-grav-seditor="{{ {'codemirror': codemirrorOptions} | json_encode|e('html_attr') }}"
+							  data-grav-seditor-mode="view"
+							  name="{{ (scope ~ field.name)|fieldName }}"
+							  id="wmd-input-store"
+							  {% if field.classes is defined %}class="{{ field.classes }} hide" {% endif %}
+							  {% if not field.classes is defined %}class="{{ field.classes }} hide" {% endif %}
+							  {% if field.style is defined %}style="{{ field.style|e }}" {% endif %}
+							  {% if field.disabled or isDisabledToggleable %}disabled="disabled"{% endif %}
+							  {% if field.placeholder %}placeholder="{{ field.placeholder|tu }}"{% endif %}
+							  {% if field.autofocus in ['on', 'true', 1] %}autofocus="autofocus"{% endif %}
+							  {% if field.novalidate in ['on', 'true', 1] %}novalidate="novalidate"{% endif %}
+							  {% if field.readonly in ['on', 'true', 1] %}readonly="readonly"{% endif %}
+							  {% if field.validate.required in ['on', 'true', 1] %}required="required"{% endif %}
+							  {% if 'preview' not in codemirrorOptions.ignore %}data-grav-urlpreview="{{ base_url }}/media/{{ admin.route|trim('/') }}.json"{% endif %}
+							>{{ value|join("\n")|e('html') }}</textarea>
+							<textarea id="wmd-summary-store" class="hide"></textarea>
+							<textarea id="wmd-intro-store" class="hide"></textarea>
+							<textarea id="wmd-body-store" class="hide"></textarea>
+						
+							<pre id="wmd-input" class="form-control" lang="{{grav.language.getActive}}"><div class="editor-content" contenteditable=true></div><div class="editor-margin"></div></pre>
+							<div class="preview-panel">
+								<div class="layout-resizer layout-resizer-preview"></div>
+								<div class="layout-toggler layout-toggler-navbar btn btn-info hide" title="Toggle navigation bar"><i class="icon-th"></i></div>
+								<div class="layout-toggler layout-toggler-preview btn btn-info" title="Toggle preview"><i class="icon-none"></i></div>
+								<div class="preview-container">
+                                                                    {% set fileName = context.media.images|length > 0 ? (context.media.images|first).url|split('/')|last : '' %}
+                                                                    {% set mediaPath = fileName|length > 0 ? (context.media.images|first).url|trim(fileName, 'right') : '' %}
+                                                                    <div id="preview-contents" data-mediapath="{{ mediaPath }}">
+                                                                        <div id="wmd-preview" class="preview-content"></div>
+                                                                    </div>
+								</div>
+							</div>
+						</div>
+						<!--
+						<div class="extension-preview-buttons">
+							<div class="btn-group drag-me" title="Drag me!">
+								<i class="icon-ellipsis-vert"></i>
+							</div>
+						</div>
+						-->
+					</div>
+					<div id="wmd-button-bar" class="hide"></div>
+					<div id="wmd-extra-buttons" class="hide">                                            
+                                            <!--
+                                            <ul>						
+                                                <li class="wmd-buttons"><a id="wmd-table-button" class="hint--bottom btn btn-success" data-hint="Insert table"><i class="icon-table"></i></a></li>
+                                            </ul>
+                                            -->
+                                        </div>
+					<div class="menu-panel">
+					</div>
+					<div class="document-panel">
+					</div>
+                                        <div class="config-panel">
+                                            <textarea class="hide" id="textarea-shortcuts-mapping"></textarea>
+                                        </div>
+					<div id="modalcontainer">
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div id="studio-media-collector-full"></div>
+                <div style="position:absolute;right:6px;width:fit-content">                    
+                    <div class="extension-preview-buttons" style="position:relative">
+                            <div class="btn-group drag-me" title="Drag me!">
+                                    <i class="icon-ellipsis-vert"></i>
+                            </div>
+                    </div>
+                </div>
+    </div>
+	<script>
+		// Use ?debug to serve original JavaScript files instead of minified
+		window.baseDir = '/user/plugins/studioeditor/assets/res';
+		/*
+		if (!/(\?|&)debug($|&)/.test(location.search)) {
+			//window.baseDir += '-min';
+		}
+		*/
+		window.require = {
+			baseUrl: window.baseDir,
+			deps: ['main']
+		};
+	</script>
+	<script src="/user/plugins/studioeditor/assets/res/require.js"></script>
+    {% elseif field.name == 'frontmatter' %}
+    {% set codemirrorOptions = {'mode': 'none', 'ignore': ['code', 'preview']} %}
+    {% include 'forms/fields/studiodatetime/studiodatetime.html.twig' with { studiodate: 'date', dvalue: context.header.date, hint: "PLUGIN_STUDIOEDITOR.PAGE_DATE_HINT", label: "PLUGIN_STUDIOEDITOR.PAGE_DATE" } %}
+    <!--
+    {% include 'forms/fields/studioorder/studioorder.html.twig' with { data: context } %}
+    -->
+    <div class="form-field grid">
+      <div class="form-label block size-1-3">
+        <label>
+          <span class="hint--bottom" data-hint="{{"PLUGIN_STUDIOEDITOR.PAGE_TITLE_HINT"|tu}}">{{"PLUGIN_STUDIOEDITOR.PAGE_TITLE"|tu}}</span>                
+        </label>
+      </div>
+      <div class="form-data block size-2-3" data-grav-field="text" data-grav-disabled="" data-grav-default="null">
+        <div class="form-input-wrapper medium ">
+          <input id="studio-title" value="{{data.header.title}}" placeholder="localhost" type="text">
+        </div>              
+      </div>    
+    </div>
+    <div class="form-field grid">
+      <div class="form-label block size-1-3">
+        <label>
+          <span class="hint--bottom" data-hint="{{"PLUGIN_STUDIOEDITOR.PAGE_AUTHOR_HINT"|tu}}">{{"PLUGIN_STUDIOEDITOR.PAGE_AUTHOR"|tu}}</span>                
+        </label>
+      </div>
+      <div class="form-data block size-2-3" data-grav-field="text" data-grav-disabled="" data-grav-default="null">
+        <div class="form-input-wrapper medium ">
+          <input id="studio-title" value="{{data.header.author}}" placeholder="localhost" type="text">
+        </div>              
+      </div>    
+    </div>    
+    {% include 'forms/fields/studioonoff/studioonoff.html.twig' with { studioonoff: 'shareicons', onoffval: context.header.shareicons, hint: "PLUGIN_STUDIOEDITOR.PAGE_SHARING_HINT", label: "PLUGIN_STUDIOEDITOR.PAGE_SHARING" } %}
+    {% include 'forms/fields/studioonoff/studioonoff.html.twig' with { studioonoff: 'allowcomments', onoffval: context.header.allowcomments, hint: "PLUGIN_STUDIOEDITOR.PAGE_COMMENTS_HINT", label: "PLUGIN_STUDIOEDITOR.PAGE_COMMENTS" } %}
+    {% include 'forms/fields/studioonoff/studioonoff.html.twig' with { studioonoff: 'slider', onoffval: context.header.slider, hint: "PLUGIN_STUDIOEDITOR.PAGE_SLIDER_HINT", label: "PLUGIN_STUDIOEDITOR.PAGE_SLIDER" } %}
+    {% include 'forms/fields/studiocolor/studiocolor.html.twig' with { studiocolor: 'bgcolor', colorval: context.header.bgcolor, colorfallback: '#ffffff', hint: "PLUGIN_STUDIOEDITOR.PAGE_BGCOLOR_HINT", label: "PLUGIN_STUDIOEDITOR.PAGE_BGCOLOR" } %}
+    {% include 'forms/fields/studiocolor/studiocolor.html.twig' with { studiocolor: 'fontcolor', colorval: context.header.fontcolor, colorfallback: '#333333', hint: "PLUGIN_STUDIOEDITOR.PAGE_FONTCOLOR_HINT", label: "PLUGIN_STUDIOEDITOR.PAGE_FONTCOLOR" } %}
+    {% include 'forms/fields/taxonomy/taxonomy.html.twig' with { data : context } %}
+    
+    <div class="form-field {{ field.classes|default('') }}">
+    
+      <div class="form-data grav-editor">
+        
+        <div class="grav-editor-content">
+          <textarea
+              data-grav-seditor=""
+              data-grav-seditor-mode="editor"
+              id="studio-frontmatter"
+              name="{{ (scope ~ field.name)|fieldName }}"
+              {% if field.style is defined %}style="{{ field.style|e }}" {% endif %}
+              {% if field.disabled or isDisabledToggleable %}disabled="disabled"{% endif %}
+              {% if field.placeholder %}placeholder="{{ field.placeholder|tu }}"{% endif %}
+              {% if field.autofocus in ['on', 'true', 1] %}autofocus="autofocus"{% endif %}
+              {% if field.novalidate in ['on', 'true', 1] %}novalidate="novalidate"{% endif %}
+              {% if field.readonly in ['on', 'true', 1] %}readonly="readonly"{% endif %}
+          >{{ value|join("\n")|e('html') }}</textarea>
+        </div>
+        <div id="studio-frontmatter-form">
+        </div>
+        <div id="studio-message">
+          <div id="studio-message-content"></div>
+        </div>
+      </div>
+    </div>
+    {% elseif field.name == 'studiogallery' %}
+      {% include 'forms/fields/studioselectize/studioselectize.html.twig' with { studioselectize: 'selection', selectvals: context.header.selection, placeholder: 'Paintings, Sculptures, etc.', hint: "PLUGIN_STUDIOEDITOR.PAGE_GALLERYFILTER_HINT", label: "PLUGIN_STUDIOEDITOR.PAGE_GALLERYFILTER" } %}
+      {% include 'forms/fields/studiolist/studiolist.html.twig' with { data: context, sources: context.header.sources } %}
+    
+    {% endif %}
+{% endblock %}

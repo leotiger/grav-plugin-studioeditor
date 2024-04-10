@@ -1,0 +1,573 @@
+<div class="modal fade modal-document-manager">
+</div>
+
+
+<div class="modal fade modal-insert-link">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Hyperlink</h2>
+			</div>
+			<div class="modal-body">
+				<p>Please provide the link URL and an optional title:</p>
+				<div class="input-group">
+					<span class="input-group-addon"><i class="icon-globe"></i></span><input
+						id="input-insert-link" type="text" class="col-sm-5 form-control"
+						placeholder='http://example.com/ "optional title"' />
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+				<a href="#" class="btn btn-primary action-insert-link"
+					data-dismiss="modal">OK</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade modal-insert-image">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Image</h2>
+			</div>
+			<div class="modal-body">
+				<p>Please provide the image URL and an optional title:</p>
+				<div class="input-group">
+					<span class="input-group-addon"><i class="icon-picture"></i></span><input
+						id="input-insert-image" type="text" class="col-sm-5 form-control"
+						placeholder='http://example.com/image.jpg "optional title"' />
+				</div>
+				<p>Example: http://example.com/image.jpg "optional title"</p>
+			</div>
+			
+			<div class="modal-footer">
+					
+					<a href="#" class="btn btn-default"
+					data-dismiss="modal">Cancel</a> <a href="#"
+					class="btn btn-primary action-insert-image" data-dismiss="modal">OK</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade modal-insert-media">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">&times;</button>
+				<h2 class="modal-title">External Media</h2>
+			</div>
+			<div class="modal-body">
+				<p>Please select the media provider:</p>
+				<select id="input-insert-mediatype" class="form-control">
+					<option value="vimeo">Vimeo</option>
+					<option value="youtube">Youtube</option>
+					<option value="soundcloud">Soundcloud</option>
+				</select>
+				<p>Please provide the media id:</p>			
+				<div class="input-group">
+					<span class="input-group-addon"><i class="icon-video"></i></span><input
+						id="input-insert-mediaid" type="text" class="col-sm-5 form-control"
+						placeholder='93439344' />
+				</div>
+				<p>Example:<br />
+				Provider: vimeo<br />
+				ID: 93439344</p>
+			</div>
+			
+			<div class="modal-footer">
+					
+					<a href="#" class="btn btn-default"
+					data-dismiss="modal">Cancel</a> <a href="#"
+					class="btn btn-primary action-insert-media" data-dismiss="modal">OK</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade modal-remove-file-confirm">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Delete</h2>
+			</div>
+			<div class="modal-body">
+				<p>
+					Are you sure you want to delete "<span class="file-title"></span>"?
+				</p>
+				<blockquote>
+					<p><b>Note:</b> It won't delete the file on synchronized locations.</p>
+				</blockquote>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+				<a href="#" class="btn btn-primary action-remove-file"
+					data-dismiss="modal">Delete</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade modal-import-url">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Import from URL</h2>
+			</div>
+			<div class="modal-body">
+				<p>Please provide a link to a Markdown document.</p>
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-3 control-label" for="input-import-url">URL</label>
+						<div class="col-sm-8">
+							<input type="text" id="input-import-url"
+								placeholder="http://www.abc.com/xyz.md" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+				<a href="#" data-dismiss="modal"
+					class="btn btn-primary action-import-url">OK</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade modal-import-harddrive-markdown">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Import from disk</h2>
+			</div>
+			<div class="modal-body">
+				<p>Please select your Markdown files here:</p>
+				<p>
+					<input type="file" id="input-file-import-harddrive-markdown"
+						multiple class="form-control" />
+				</p>
+				<p>Or drag and drop your Markdown files here:</p>
+				<p id="dropzone-import-harddrive-markdown" class="drop-zone">Drop
+					files here</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade modal-import-harddrive-html">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Convert HTML to Markdown</h2>
+			</div>
+			<div class="modal-body">
+				<p>Please select your HTML files here:</p>
+				<p>
+					<input type="file" id="input-file-import-harddrive-html" multiple
+						class="form-control" />
+				</p>
+				<p>Or drag and drop your HTML files here:</p>
+				<p id="dropzone-import-harddrive-html" class="drop-zone">Drop
+					files here</p>
+				<p>Or insert your HTML code here:</p>
+				<textarea id="input-convert-html" class="form-control"></textarea>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-default" data-dismiss="modal">Close</a> <a
+					href="#" class="btn btn-primary action-convert-html"
+					data-dismiss="modal">OK</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade modal-settings">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">&times;</button>
+				<h2 class="modal-title">Settings</h2>
+				<ul class="nav nav-tabs">
+					<li class="active"><a class="action-load-settings"
+						href="#tabpane-settings-basic" data-toggle="tab">Basic</a></li>
+					<li><a class="action-load-settings"
+						href="#tabpane-settings-advanced" data-toggle="tab">Advanced</a></li>
+					<li><a class="action-load-settings"
+						href="#tabpane-settings-extensions" data-toggle="tab">Extensions</a></li>
+					<li><a class="action-load-settings"
+						href="#tabpane-settings-utils" data-toggle="tab">Utils</a></li>
+				</ul>
+			</div>
+			<div class="modal-body">
+
+				<div class="tab-content clearfix">
+					<div class="tab-pane active" id="tabpane-settings-basic">
+						<div class="form-horizontal">
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Layout orientation</label>
+								<div class="col-sm-7">
+									<div class="radio">
+										<label> <input type="radio"
+											name="radio-layout-orientation" value="horizontal">
+											Horizontal
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio"
+											name="radio-layout-orientation" value="vertical">
+											Vertical
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="input-settings-theme">Theme</label>
+								<div class="col-sm-7">
+									<select id="input-settings-theme" class="form-control">
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-4"></div>
+								<div class="col-sm-7">
+									<div class="checkbox">
+									    <label>
+										    <input type="checkbox" id="input-settings-markdown-extra" />
+										    <b>Markdown Extra/GitHub Flavored Markdown</b> syntax
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-4"></div>
+								<div class="col-sm-7">
+									<div class="checkbox">
+									    <label>
+										    <input type="checkbox" id="input-settings-mathjax" />
+										    <b>LaTeX mathematical expressions</b> using <code>$</code> and <code>$$</code> delimiters
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"
+									for="input-settings-gdrive-multiaccount">Google Drive multi-accounts
+								</label>
+								<div class="col-sm-7">
+									<select id="input-settings-gdrive-multiaccount" class="form-control">
+    									<option value="1">1 account</option>
+    									<option value="2">2 accounts</option>
+    									<option value="3">3 accounts</option>
+									</select>
+									<span class="help-block"><b>Please sign in first with Google.</b> Once linked with your Google accounts, changing account is not possible unless you reset the application.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tabpane-settings-advanced">
+						<div class="form-horizontal">
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Edit mode</label>
+								<div class="col-sm-7">
+									<div class="radio">
+										<label> <input type="radio"
+											name="radio-settings-edit-mode" value="ltr">
+											Left-To-Right
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio"
+											name="radio-settings-edit-mode" value="rtl">
+											Right-To-Left
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Editor's font style</label>
+								<div class="col-sm-7">
+									<div class="radio">
+										<label> <input type="radio"
+											name="radio-settings-editor-font-class" value="font-rich">
+											Rich
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio"
+											name="radio-settings-editor-font-class" value="font-rich-monospaced">
+											Rich Monospaced
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio"
+											name="radio-settings-editor-font-class" value="font-monospaced">
+											Monospaced
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"
+									for="input-settings-font-size">Font size ratio</label>
+								<div class="col-sm-8 form-inline">
+									<input type="text" id="input-settings-font-size"
+										class="form-control col-sm-2">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"
+									for="input-settings-max-width">Max width ratio</label>
+								<div class="col-sm-8 form-inline">
+									<input type="text" id="input-settings-max-width"
+										class="form-control col-sm-2">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"
+									for="input-settings-cursor-focus">Cursor focus ratio</label>
+								<div class="col-sm-8 form-inline">
+									<input type="text" id="input-settings-cursor-focus"
+										class="form-control col-sm-2">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"
+									for="input-settings-lazy-rendering">Lazy rendering <a
+									href="#" class="tooltip-lazy-rendering">(?)</a>
+								</label>
+								<div class="col-sm-7">
+									<div class="checkbox">
+										<input type="checkbox" id="input-settings-lazy-rendering" />
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"
+									for="textarea-settings-default-content">Default content
+									<a href="#" class="tooltip-default-content">(?)</a>
+								</label>
+								<div class="col-sm-7">
+									<textarea id="textarea-settings-default-content"
+										class="form-control"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"
+									for="textarea-settings-publish-template">Default
+									template <a href="#" class="tooltip-template">(?)</a>
+								</label>
+								<div class="col-sm-7">
+									<textarea id="textarea-settings-publish-template"
+										class="form-control"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"
+									for="textarea-settings-pdf-template">PDF
+									template <a href="#" class="tooltip-template">(?)</a>
+								</label>
+								<div class="col-sm-7">
+									<textarea id="textarea-settings-pdf-template"
+										class="form-control"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="textarea-settings-pdf-options">PDF options
+                                    <a href="#" class="tooltip-pdf-options">(?)</a>
+                                </label>
+								<div class="col-sm-7">
+                                    <textarea id="textarea-settings-pdf-options"
+                                              class="form-control"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"
+									for="input-settings-markdown-mime-type">Markdown MIME type
+								</label>
+								<div class="col-sm-7">
+									<select id="input-settings-markdown-mime-type" class="form-control">
+										<option value="text/plain">text/plain</option>
+										<option value="text/x-markdown">text/x-markdown</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Permissions</label>
+								<div class="col-sm-7">
+									<div class="checkbox">
+									    <label>
+										    <input type="checkbox" id="input-settings-gdrive-full-access" />
+										    Allow StackEdit to open any document in Google Drive
+										</label> <span class="help-block">Existing authorization has to be revoked in
+										<a href="https://www.google.com/settings/dashboard" target="_blank">Google Dashboard</a>
+										for this change to take effect.</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-4"></div>
+								<div class="col-sm-7">
+									<div class="checkbox">
+									    <label>
+										    <input type="checkbox" id="input-settings-dropbox-full-access" />
+										    Allow StackEdit to open any document in Dropbox
+										</label> <span class="help-block">If unchecked, access will be restricted to folder
+										<b>/Applications/StackEdit</b> for existing files.</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-4"></div>
+								<div class="col-sm-7">
+									<div class="checkbox">
+									    <label>
+										    <input type="checkbox" id="input-settings-github-full-access" />
+										    Allow StackEdit to access private repositories in GitHub
+										</label> <span class="help-block">Existing authorization has to be revoked in
+										<a href="https://github.com/settings/applications" target="_blank">GitHub settings</a>
+										for this change to take effect.</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"
+									for="input-settings-publish-commit-msg">GitHub commit message</label>
+								<div class="col-sm-7">
+									<input type="text" id="input-settings-publish-commit-msg"
+										class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"
+									for="input-settings-couchdb-url">CouchDB URL</label>
+								<div class="col-sm-7">
+									<input type="text" id="input-settings-couchdb-url"
+										class="form-control">
+                                    <span class="help-block pull-right"><a
+                                            target="blank"
+                                            href="https://github.com/benweet/stackedit/blob/master/doc/couchdb-setup.md">Setup
+                                        your own CouchDB...</a></span>
+                             </div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tabpane-settings-extensions">
+						<div class="panel-group accordion-extensions"></div>
+						<span class="help-block pull-right"><a target="_blank"
+							href="https://github.com/benweet/stackedit/blob/master/doc/developer-guide.md#developer-guide">Create
+								your own extension...</a></span>
+					</div>
+					<div class="tab-pane" id="tabpane-settings-utils">
+						<div class="tab-pane-button-container">
+							<a href="#" class="btn btn-block btn-default action-welcome-file"
+								data-dismiss="modal"><i class="icon-help-circled"></i>
+								Hello! document</a> <a href="#"
+								class="btn btn-block btn-default action-welcome-tour"
+								data-dismiss="modal"><i
+								class="icon-help-circled"></i> Welcome tour</a>
+						</div>
+						<div class="tab-pane-button-container">
+							<a href="#"
+								class="btn btn-block btn-default action-import-docs-settings"><i
+								class="icon-cog-alt"></i> Import docs & settings</a> <a href="#"
+								class="btn btn-block btn-default action-export-docs-settings"
+								data-dismiss="modal"><i class="icon-cog-alt"></i>
+								Export docs & settings</a> <input type="file"
+								id="input-file-import-docs-settings" class="hide">
+						</div>
+						<div class="tab-pane-button-container">
+							<a href="#"
+								class="btn btn-block btn-default action-default-settings"
+								data-dismiss="modal"><i class="icon-wrench"></i>
+								Load default settings</a> <a href="#" class="btn btn-block btn-default"
+								data-dismiss="modal" data-toggle="modal"
+								data-target=".modal-app-reset"><i
+								class="icon-fire"></i> Reset application</a> <a target="_blank" href="recovery.html" class="btn btn-block btn-default"><i
+								class="icon-medkit"></i> StackEdit recovery</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+				<a href="#" class="btn btn-primary action-apply-settings"
+					data-dismiss="modal">OK</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade modal-non-unique">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<h2 class="modal-title">Ooops...</h2>
+			</div>
+			<div class="modal-body">
+				<p>StackEdit has stopped because another instance was running in
+					the same browser.</p>
+				<blockquote>
+                    <p>If you want to reopen StackEdit, click on
+					"Reload".</p>
+                </blockquote>
+			</div>
+			<div class="modal-footer">
+				<a href="javascript:window.location.reload();"
+					class="btn btn-primary">Reload</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="medium-editor-toolbar-1" class="hide medium-editor-toolbar medium-editor-stalker-toolbar medium-toolbar-arrow-under medium-editor-toolbar-active" style="left: 404.975px; right: initial; top: 643.45px;">
+	<ul id="medium-editor-toolbar-actions1" class="medium-editor-toolbar-actions" style="display: block;">
+		<li><button class="medium-editor-action medium-editor-action-bold medium-editor-button-first" data-action="bold" title="bold" aria-label="bold"><b>B</b></button></li>
+		<li><button class="medium-editor-action medium-editor-action-italic" data-action="italic" title="italic" aria-label="italic"><b><i>I</i></b></button></li>
+		<li><button class="medium-editor-action medium-editor-action-underline" data-action="underline" title="underline" aria-label="underline"><b><u>U</u></b></button></li>
+		<li><button class="medium-editor-action medium-editor-action-anchor" data-action="createLink" title="link" aria-label="link"><b>#</b></button></li>
+		<li><button class="medium-editor-action medium-editor-action-h2" data-action="append-h2" title="header type two" aria-label="header type two"><b>H2</b></button></li>
+		<li><button class="medium-editor-action medium-editor-action-h3" data-action="append-h3" title="header type three" aria-label="header type three"><b>H3</b></button></li>
+		<li><button class="medium-editor-action medium-editor-action-quote medium-editor-button-last" data-action="append-blockquote" title="blockquote" aria-label="blockquote"><b>“</b></button></li>
+	</ul>
+	<div class="medium-editor-toolbar-form" id="medium-editor-toolbar-form-anchor-1">
+		<input class="medium-editor-toolbar-input" placeholder="Paste or type a link" type="text">
+		<a href="#" class="medium-editor-toolbar-save">✓</a>
+		<a href="#" class="medium-editor-toolbar-close">×</a>
+	</div>
+</div>

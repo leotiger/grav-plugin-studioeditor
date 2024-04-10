@@ -1,0 +1,169 @@
+extends@: default
+title: PLUGIN_ADMIN.DEFAULT
+
+rules:
+  slug:
+    pattern: '[a-zA-Zа-яA-Я0-9_\-]+'
+    min: 1
+    max: 80
+  parent:
+    pattern: '[a-zA-Z0-9_\-\/\.]+'
+    min: 1
+    max: 80
+
+form:
+  validation: loose
+
+  fields:
+
+    tabs:
+      type: tabs      
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          ordering@: 0
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            header.title:
+              type: text
+              autofocus: true
+              style: vertical
+              label: PLUGIN_ADMIN.TITLE
+
+            content:
+              type: studioeditor
+              autofocus: false
+              validate:
+                type: textarea
+
+            header.resizeall:
+              replace@: true
+              type: studiodefaulttoggle
+              name: resizeall
+              label: PLUGIN_STUDIOEDITOR.PAGE_RESIZE_IMAGES
+              help: PLUGIN_STUDIOEDITOR.PAGE_RESIZE_IMAGES_HINT
+              highlight: 0
+              default: 0
+              validate:
+                type: bool
+              options:
+                1: PLUGIN_STUDIOEDITOR.YES
+                0: PLUGIN_STUDIOEDITOR.NO
+            
+            uploads:
+              type: studiopagemedia
+              label: PLUGIN_ADMIN.PAGE_MEDIA
+              accept:
+                - image/*
+                - video/*
+                - application/zip
+                - application/pdf
+            
+            header.media_order:
+                unset@: true
+
+        advanced:
+          ordering@: options
+          type: tab
+          title: PLUGIN_ADMIN.ADVANCED
+
+          fields:
+            columns:
+              type: columns
+              fields:
+                column1:
+                  type: column
+                  fields:
+                    route:
+                      type: parents
+                      label: PLUGIN_ADMIN.PARENT
+                      classes: fancy
+                      validate:
+                        required: false
+
+        options:
+          type: tab
+          ordering@: 4
+          title: PLUGIN_ADMIN.OPTIONS
+
+          fields:
+
+            publishing:
+              type: section
+              title: PLUGIN_ADMIN.PUBLISHING
+              underline: true
+
+              fields:
+                header.date:
+                  type: datetime
+                  label: PLUGIN_ADMIN.DATE
+                  toggleable: true
+                  help: PLUGIN_ADMIN.DATE_HELP
+
+                header.publish_date:
+                  type: datetime
+                  label: PLUGIN_ADMIN.PUBLISHED_DATE
+                  toggleable: true
+                  help: PLUGIN_ADMIN.PUBLISHED_DATE_HELP
+
+                header.unpublish_date:
+                  type: datetime
+                  label: PLUGIN_ADMIN.UNPUBLISHED_DATE
+                  toggleable: true
+                  help: PLUGIN_ADMIN.UNPUBLISHED_DATE_HELP
+
+                header.metadata:
+                  toggleable: true
+                  type: array
+                  label: PLUGIN_ADMIN.METADATA
+                  help: PLUGIN_ADMIN.METADATA_HELP
+                  placeholder_key: PLUGIN_ADMIN.METADATA_KEY
+                  placeholder_value: PLUGIN_ADMIN.METADATA_VALUE
+
+            taxonomies:
+              type: section
+              title: PLUGIN_ADMIN.TAXONOMIES
+              underline: true
+
+              fields:
+                header.taxonomy:
+                  type: taxonomy
+                  label: PLUGIN_ADMIN.TAXONOMY
+                  multiple: true
+                  validate:
+                    type: array
+
+        help:
+          type: tab
+          ordering@: 100
+          title: PLUGIN_STUDIOEDITOR.TAB_HELP
+          fields:
+            helptabs:
+              type: tabs
+              fields:
+                editor:
+                  type: tab
+                  title: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR
+                  fields:
+                    editor01:
+                      type: display
+                      size: large
+                      label: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_01_LABEL
+                      markdown: true
+                      content: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_01_CONTENT                        
+                    editor02:
+                      type: display
+                      size: large
+                      label: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_02_LABEL
+                      markdown: true
+                      content: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_02_CONTENT                        
+                    editor03:
+                      type: display
+                      size: large
+                      label: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_03_LABEL
+                      markdown: true
+                      content: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_03_CONTENT                        
+
