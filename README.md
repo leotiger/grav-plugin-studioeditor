@@ -4,6 +4,8 @@ The **Studio Editor Plugin** for [Grav](http://github.com/getgrav/grav) provides
 
 The plugin at it's current state, v1.1.1 has issues with the Flex Objects plugin. To access the Flex Objects plugin configuration you have to disable the Studio Editor plugin and reactivate it after touching the Flex Objects configuration.
 
+Please be advised that some of the features, like MathJax haven't been retested for this public release. This may apply to other features as well. What's definitely working out of the box is what you expect to work: editing standard and enhanced markdown.
+
 ### Installation
 
 You will have to download the plugin from GitHub while it's not available in the GRAV universe and extract it to your plugin folder.
