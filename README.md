@@ -9,3 +9,7 @@ Please be advised that some of the features, like MathJax haven't been retested 
 ### Installation
 
 You will have to download the plugin from GitHub while it's not available in the GRAV universe and extract it to your plugin folder.
+
+### Issues
+
+Currently the Studio Editor won't initialize correctly if the page was saved with a primary tab other than Content active during saving. You will need to reload with the content tab active or use the Fullscreen toggle button, which indicates that the issue may have an easy solution. If there's some feedback, I will most probably solve this minor glitch.
