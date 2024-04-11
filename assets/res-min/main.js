@@ -7226,10 +7226,10 @@ var saveAs = saveAs || "undefined" != typeof navigator && navigator.msSaveOrOpen
 }), define("constants", [], function() {
  var e = {};
  return e.VERSION = "4.3.14", e.MAIN_URL = "https://stackedit.io/", e.GOOGLE_ANALYTICS_ACCOUNT_ID = "UA-39556145-1", 
- e.GOOGLE_API_KEY = "AIzaSyAeCU8CGcSkn0z9js6iocHuPBX4f_mMWkw", e.GOOGLE_DRIVE_APP_ID = "241271498917", 
- e.DROPBOX_APP_KEY = "lq6mwopab8wskas", e.DROPBOX_APP_SECRET = "851fgnucpezy84t", 
- e.DROPBOX_RESTRICTED_APP_KEY = "sw0hlixhr8q1xk0", e.DROPBOX_RESTRICTED_APP_SECRET = "1r808p2xygs6lbg", 
- e.BITLY_ACCESS_TOKEN = "317e033bfd48cf31155a68a536b1860013b09c4c", e.DEFAULT_FILE_TITLE = "Title", 
+ e.GOOGLE_API_KEY = "noway", e.GOOGLE_DRIVE_APP_ID = "241271498917", 
+ e.DROPBOX_APP_KEY = "noway", e.DROPBOX_APP_SECRET = "851fgnucpezy84t", 
+ e.DROPBOX_RESTRICTED_APP_KEY = "noway", e.DROPBOX_RESTRICTED_APP_SECRET = "1r808p2xygs6lbg", 
+ e.BITLY_ACCESS_TOKEN = "noway", e.DEFAULT_FILE_TITLE = "Title", 
  e.DEFAULT_FOLDER_NAME = "New folder", e.GDRIVE_DEFAULT_FILE_TITLE = "New Markdown document", 
  e.EDITOR_DEFAULT_PADDING = 35, e.CHECK_ONLINE_PERIOD = 12e4, e.AJAX_TIMEOUT = 3e4, 
  e.ASYNC_TASK_DEFAULT_TIMEOUT = 6e4, e.ASYNC_TASK_LONG_TIMEOUT = 18e4, e.USER_IDLE_THRESHOLD = 3e5, 
