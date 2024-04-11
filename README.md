@@ -54,7 +54,7 @@ Currently the Studio Editor won't initialize correctly if the page was saved wit
 
 ### Credits
 
-[StackEdit](https://stackedit.io]
+[StackEdit](https://stackedit.io)
 
 ### ToDo
 
