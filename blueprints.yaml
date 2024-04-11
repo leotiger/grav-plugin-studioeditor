@@ -1,12 +1,12 @@
 name: Studio Editor
 version: 1.1.2
 description: A Pagedown Editor for GRAV
-icon: database
+icon: edit
 author:
   name: Uli Hake
   email: uli.hake@gmail.com
   url: http://www.cal-talaia.cat
-keywords: admin, plugin, manager, panel, stackedit, content management
+keywords: admin, plugin, manager, panel, stackedit, markdown, editor, content management
 
 dependencies:
   - { name: admin, version: '~1.10' }
