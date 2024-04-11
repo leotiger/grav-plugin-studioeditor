@@ -54,9 +54,7 @@ Currently the Studio Editor won't initialize correctly if the page was saved wit
 
 ### Credits
 
-https://www.php.net/manual/en/image.installation.php
-
-https://developers.google.com/speed/webp
+[StackEdit][https://stackedit.io]
 
 ### ToDo
 
