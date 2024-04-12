@@ -1,5 +1,9 @@
 # Grav Studio Editor Plugin
 
+**If you encounter any issues, please don't hesitate
+to [report
+them](https://github.com/leotiger/grav-plugin-studioeditor/issues).**
+
 ![Screenshot](Screenshot.png)
 
 The **Studio Editor Plugin** for [Grav](http://github.com/getgrav/grav) provides an advanced markdown editor with Live preview and WYSIWYG controls and support for extended markdown features. The plugin allows to activate some nice extra features, e.g. if you use webp plugin the plugin will automatically replace calls to jpg and png files to the corresponding webp version if it exists without using redirection.
