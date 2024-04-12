@@ -64,7 +64,7 @@ Studioeditor does not support Admin's media resize. If you edit a page in expert
 
 [StackEdit](https://stackedit.io)
 
-Carlos Mújica, an artist from Colombia for his artwork and my gratitude for offering me some of his works. I offered him a website and I thought, let's do it with GRAV. Without him Studioeditor wouldn't have been released to the wild.
+Carlos Mújica, an artist from Colombia for his artwork and my gratitude for offering me some of his works. I offered him a website for his gift and I thought, let's do it with GRAV. Without him Studioeditor wouldn't have been released to the wild.
 
 ### ToDo
 
