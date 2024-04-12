@@ -58,7 +58,7 @@ As Studioeditor requires the Admin plugin you should use Admin to maintain the c
 
 Currently the Studio Editor won't initialize correctly if the page was saved with a primary tab other than Content active during saving. You will need to reload with the content tab active or use the Fullscreen toggle button, which indicates that the issue may have an easy solution. If there's some feedback, I will most probably solve this minor glitch.
 
-Studioeditor does not support Admin's media resize. If you edit a page in expert mode changing the media sizes, you will receive an error once you access the page configuration in normal mode. Currently there's only one workaround: clearing the cookies from your browser cache... This can be addressed if I get feedback convincing me that there's a need for this plugin. But don't worry, Studioeditor includes an advanced media resizer which allows to create a set of resized versions for every image uploaded.
+Studioeditor does not support Admin's media resize. If you edit a page in expert mode changing the media sizes, you will receive an error once you access the page configuration in normal mode. Currently there's only one workaround: clearing the cookies from your browser cache... This can be addressed if I get feedback convincing me that there's a need for this plugin. But don't worry, Studioeditor includes an advanced media resizer which allows to create a set of resized versions for every image uploaded. With all that said, simply don't use the image resizer build into Admin in **Expert Mode**, it will delete a great deal of images resized by Studioeditor leaving only the largest images in stock.
 
 ### Credits
 
