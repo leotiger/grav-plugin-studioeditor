@@ -63,6 +63,7 @@ Carlos Mújica, an artist from Colombia for his artwork and my gratitude for off
 ### ToDo
 
 - [x] Clean code base getting rid of tons of files not used
+- [x] Update underlying code base as many of the libs are quite old 
 - [x] Enhance support of configuration options for the editor instance directly from Admin
 - [x] Implement additional markdown features
 
