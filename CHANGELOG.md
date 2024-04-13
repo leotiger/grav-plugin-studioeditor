@@ -1,11 +1,7 @@
 # v1.1.4
 ## 11/04/2024
 
-1. [](#new)
-    * composer.json added
-    * autoload generated
-    * License file added
-2. [](#bugfix)
+1. [](#bugfix)
     * Blueprint compatibility problem solved. Problems with Flex-Objects gone away.
     * Thumbnail media resizer works now in admin.
 
