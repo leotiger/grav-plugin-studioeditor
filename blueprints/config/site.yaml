@@ -9,12 +9,6 @@ form:
             underline: true
 
             fields:
-                helpone:
-                    type: display
-                    size: large
-                    label: General
-                    markdown: true
-                    content: "Help soon to come. In the meantime, please see what the labels offer. Many of them expand contextual help when you hover over them with the mouse cursor."
                 title:
                     type: text
                     label: PLUGIN_ADMIN.SITE_TITLE

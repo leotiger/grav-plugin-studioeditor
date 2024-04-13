@@ -7,6 +7,8 @@
     * License file added
 2. [](#bugfix)
     * Blueprint compatibility problem solved. Problems with Flex-Objects gone away.
+    * Thumbnail media resizer works now in admin.
+
 
 # v1.1.3
 ## 11/04/2024

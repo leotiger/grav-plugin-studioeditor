@@ -14,31 +14,47 @@
 
 
 {% if exists %}
-<div id="studio-media-collector">
-  <div class="form-field grid vertical studio-media-field">
-      <div class="form-label studio-media-label">
-          <label>{{ field.label|tu }}</label>
-      </div>
-      <div class="form-data form-uploads-wrapper">
-          {% set uploadLimit = grav.config.system.media.upload_limit / 1024 / 1024 %}
-          {% set dropzoneSettings = { maxFileSize: uploadLimit } %}
-          <div id="grav-dropzone"
-               class="dropzone"
-               data-media-path="{{ base_url_relative_frontend|rtrim('/') }}/{{ admin.route|trim('/') }}"
-               data-media-url="{{ base_url }}/media/{{ admin.route|trim('/') }}.json"
-               data-media-local="{{ base_url_relative_frontend|rtrim('/') }}/{{ admin.route|trim('/') }}"
-               data-dropzone-options="{{ dropzoneSettings|json_encode|e('html_attr') }}"></div>
-          <span>{{ value|join("\n") }}</span>
-      </div>
-      
-  </div>
-</div>
-{% else %}
-<div class="form-tab">
-    <div class="form-field">
-        <div class="form-label"> ok
-            {{ "PLUGIN_ADMIN.CANNOT_ADD_MEDIA_FILES_PAGE_NOT_SAVED"|tu }}
+    
+    {% set media_url = form.getMediaTaskRoute() ?: '/media/' ~ admin.route|trim('/') ~ '.json' %}
+    {% set media_uri = context.mediaUri() %}
+    
+    {% set pageMediaStore = get_cookie('grav-admin-pagemedia')|default('{"width":200,"collapsed":false}')|json_decode %}
+    
+    <div id="studio-media-collector">
+        <div class="form-field grid vertical studio-media-field pagemedia-field">
+            <div class="form-label studio-media-label">
+                <label class="media-collapser {{ field.labelclasses }}">
+                  <i class="fa fa-fw small fa-chevron-{{ pageMediaStore.collapsed ? 'right' : 'down' }}"></i>
+                  {{ field.label|t }} <span data-pagemedia-count>({{ admin.page.media|length }})</span>
+                </label>
+                <div class="{{ pageMediaStore.collapsed ? 'hidden' : '' }}">
+                  <input type="range" min="70" step="10" max="200" value="{{ pageMediaStore.width }}" class="media-resizer">
+                </div>
+            </div>
+            <div class="form-data form-uploads-wrapper">
+                {% set uploadLimit = grav.config.system.media.upload_limit / 1024 / 1024 %}
+                {% set dropzoneSettings = { maxFileSize: uploadLimit } %}
+                <div id="grav-dropzone"
+                     class="dropzone"
+                     data-media-path="{{ base_url_relative_frontend|rtrim('/') }}/{{ admin.route|trim('/') }}"
+                     data-media-url="{{ base_url }}/media/{{ admin.route|trim('/') }}.json"
+                     data-media-local="{{ base_url_relative_frontend|rtrim('/') }}/{{ admin.route|trim('/') }}"
+                     data-media-uri="{{ media_uri|e('html_attr') }}"
+                     data-dropzone-options="{{ dropzoneSettings|json_encode|e('html_attr') }}"></div>
+                <span>{{ value|join("\n") }}</span>
+            </div>
+            {% if admin.session.expert == '0' or not user.authorize('admin.super') %}
+            <input type="hidden" name="{{ (scope ~ field.name)|fieldName }}" value="{{ value }}" />
+            {% endif %}
+
         </div>
     </div>
-</div>
+{% else %}
+    <div class="form-tab">
+        <div class="form-field">
+            <div class="form-label"> ok
+                {{ "PLUGIN_ADMIN.CANNOT_ADD_MEDIA_FILES_PAGE_NOT_SAVED"|tu }}
+            </div>
+        </div>
+    </div>
 {% endif %}
