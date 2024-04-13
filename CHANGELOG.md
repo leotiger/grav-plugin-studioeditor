@@ -4,7 +4,10 @@
 1. [](#bugfix)
     * Blueprint compatibility problem solved. Problems with Flex-Objects gone away.
     * Thumbnail media resizer works now in admin.
+    * fix previewManager call for external commands
 
+2. [](#improved)
+    * Removed a lot of unused files
 
 # v1.1.3
 ## 11/04/2024
