@@ -64,7 +64,7 @@ Carlos Mújica, an artist from Colombia for his artwork and my gratitude for off
 This plugin wouldn't exist without the great work behind, GRAV
 
 [StackEdit](https://github.com/benweet/stackedit)
-This plugin wouldn't exist also without StackEdit, the current version uses Markdown-it, but the version used within StudioEditor is based on v4.x versions.
+This plugin wouldn't exist also without StackEdit, the current version (v5.x) of StackEdit uses Markdown-it, but the version used within StudioEditor is based on v4.x versions. Future versions of StudioEdit will use Markdown-it as well.
 
 ### Important
 
