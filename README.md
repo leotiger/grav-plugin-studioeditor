@@ -63,7 +63,7 @@ Carlos Mújica, an artist from Colombia for his artwork and my gratitude for off
 [GRAV](https://getgrav.org)
 This plugin wouldn't exist without the great work behind, GRAV
 
-[StackEdit](https://getgrav.org](https://github.com/benweet/stackedit)
+[StackEdit](https://github.com/benweet/stackedit)
 This plugin wouldn't exist also without StackEdit, the current version uses Markdown-it, but the version used within StudioEditor is based on v4.x versions.
 
 ### Important
