@@ -70,10 +70,15 @@ This plugin wouldn't exist also without StackEdit, the current version (v5.x) of
 
 Despite having been reviewed and found error free, this plugin was developed many years ago and uses javascript packages that haven't been updated for a long time. As this plugin is used in the back-end, inside of Admin, without any exposure on the front-end, the risk of possible security problems related, if they exist, is minimal to none as access to the admin is restricted to authorized users. If the plugin gains some popularity, we'll address this problem by updating and substituting javascript packages.
 
+### Collaboration
+
+I'm looking out for collaborators even owners for this plugin. Feel free to ask if you feel comfortable with the ToDos'...
+
 ### ToDo
 
 - [x] Clean code base getting rid of tons of files not used
 - [x] Update underlying code base as many of the libs are quite old 
 - [x] Enhance support of configuration options for the editor instance directly from Admin
 - [x] Implement additional markdown features
+- [x] Implement art of the state markdown parser like Markdown-it
 
