@@ -8,8 +8,6 @@ them](https://github.com/leotiger/grav-plugin-studioeditor/issues).**
 
 The **Studio Editor Plugin** for [Grav](http://github.com/getgrav/grav) provides an advanced markdown editor with Live preview and WYSIWYG controls and support for extended markdown features. The plugin allows to activate some nice extra features, e.g. if you use webp plugin the plugin will automatically replace calls to jpg and png files to the corresponding webp version if they exist without using redirection, another great feature is the possibility to drag'n'drop images from the upload area right into the editor instance like within the standard editor.
 
-The plugin at it's current state has issues with the Flex Objects plugin. To access the Flex Objects plugin configuration you have to dissable the Studio Editor plugin and reactivate it after touching the Flex Objects configuration. Please have a look at the issues section below for more information.
-
 Please be advised that some of the features, like MathJax haven't been retested for this public release. This may apply to other features as well. What's definitely working out of the box is what you expect to work: editing standard and enhanced markdown. Or why not editing the summary if it uses the default separator (===) directly within the editor without activating expert mode?
 
 ## Installation
