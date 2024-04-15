@@ -1,11 +1,17 @@
+# v1.1.6
+## 04/15/2024
+
+1. [](#bugfix)
+    * default.yaml missing published field in options.
+
 # v1.1.5
-## 11/04/2024
+## 04/15/2024
 
 1. [](#bugfix)
     * default.yaml was lacking essential things in advanced tab.
 
 # v1.1.4
-## 11/04/2024
+## 04/11/2024
 
 1. [](#bugfix)
     * Blueprint compatibility problem solved. Problems with Flex-Objects gone away.
@@ -16,7 +22,7 @@
     * Removed a lot of unused files
 
 # v1.1.3
-## 11/04/2024
+## 04/11/2024
 
 1. [](#new)
     * Prepared for inclusion in GRAV packages
@@ -26,7 +32,7 @@
 
 
 # v1.1.2
-## 11/04/2024
+## 04/11/2024
 
 1. [](#new)
     * composer.json added
@@ -38,7 +44,7 @@
     * README.md
 
 # v1.1.1
-## 11/04/2024
+## 04/11/2024
 
 1. [](#new)
     * First public release for the Studio Editor for GRAV
