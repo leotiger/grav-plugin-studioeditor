@@ -1,8 +1,8 @@
 <?php return array(
     'root' => array(
         'name' => 'leotiger/grav-plugin-studioeditor',
-        'pretty_version' => '1.1.6',
-        'version' => '1.1.6.0',
+        'pretty_version' => '1.1.7',
+        'version' => '1.1.7.0',
         'reference' => NULL,
         'type' => 'grav-plugin',
         'install_path' => __DIR__ . '/../../',
@@ -11,8 +11,8 @@
     ),
     'versions' => array(
         'leotiger/grav-plugin-studioeditor' => array(
-            'pretty_version' => '1.1.6',
-            'version' => '1.1.6.0',
+            'pretty_version' => '1.1.7',
+            'version' => '1.1.7.0',
             'reference' => NULL,
             'type' => 'grav-plugin',
             'install_path' => __DIR__ . '/../../',
