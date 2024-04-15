@@ -1,3 +1,9 @@
+# v1.1.7
+## 04/15/2024
+
+1. [](#improved)
+    * Removed information relating to Flex Objects problems as these have been solved.
+
 # v1.1.6
 ## 04/15/2024
 
