@@ -37,20 +37,6 @@ form:
               autofocus: false
               validate:
                 type: textarea
-
-            header.resizeall:
-              replace@: true
-              type: studiodefaulttoggle
-              name: resizeall
-              label: PLUGIN_STUDIOEDITOR.PAGE_RESIZE_IMAGES
-              help: PLUGIN_STUDIOEDITOR.PAGE_RESIZE_IMAGES_HINT
-              highlight: 0
-              default: 0
-              validate:
-                type: bool
-              options:
-                1: PLUGIN_STUDIOEDITOR.YES
-                0: PLUGIN_STUDIOEDITOR.NO
             
             uploads:
               type: studiopagemedia
@@ -64,8 +50,150 @@ form:
             header.media_order:
                 unset@: true
 
+            header.related_pages:
+              type: pages
+              size: large
+              classes: fancy
+              label: Select related pages
+              show_all: true
+              show_modular: false
+              show_root: false
+              help: Related pages
+              multiple: true
+              validate:
+                type: array
+
+            columns:
+              type: columns
+
+              fields:
+                column1:
+                  type: column
+                  fields:
+
+                    header.author:
+                      type: text
+                      style: vertical
+                      label: PLUGIN_ADMIN.AUTHOR
+
+                    header.fullwidth:
+                      type: select
+                      name: fullwidth
+                      size: long
+                      label: Page Style
+                      help: Select a page style
+                      default: row
+                      novalidate: true
+                      options:
+                        row: 'Row (Max width: 1008px)'
+                        rowfull: 'Row full (with Grid)'
+                        rowfullfull: 'Row (without Grid)'
+                      validate:
+                        required: false
+
+                column2:
+                  type: column
+                  fields:
+
+                    header.videoset:
+                      type: filepicker
+                      label: PLUGIN_STUDIOEDITOR.PAGE_BGVIDEO
+                      help: PLUGIN_STUDIOEDITOR.PAGE_BGVIDEO_HINT
+                      name: videoset
+
+                    header.bgimage:
+                      type: filepicker
+                      label: PLUGIN_STUDIOEDITOR.PAGE_BGIMAGE
+                      help: PLUGIN_STUDIOEDITOR.PAGE_BGIMAGE_HINT
+                      name: bgimage
+                      preview_images: true
+
+            columnstwo:
+              type: columns
+
+              fields:
+                column1:
+                  type: column
+
+                  fields:                  
+
+                    header.bgcolor:
+                      type: studiocolorpicker
+                      id: preview-bgcolor
+                      name: bgcolor
+                      label: PLUGIN_STUDIOEDITOR.PAGE_BGCOLOR
+                      help: PLUGIN_STUDIOEDITOR.PAGE_BGCOLOR_HINT
+                    header.shareicons:
+                      type: toggle
+                      name: shareicons
+                      label: PLUGIN_STUDIOEDITOR.PAGE_SHARING
+                      help: PLUGIN_STUDIOEDITOR.PAGE_SHARING_HINT
+                      highlight: 1
+                      validate:
+                        type: bool
+                      options:
+                        1: PLUGIN_STUDIOEDITOR.YES
+                        0: PLUGIN_STUDIOEDITOR.NO
+
+                column2:
+                  type: column
+
+                  fields:
+
+                    header.fontcolor:
+                      type: studiocolorpicker
+                      name: fontcolor
+                      id: preview-fontcolor
+                      label: PLUGIN_STUDIOEDITOR.PAGE_FONTCOLOR
+                      help: PLUGIN_STUDIOEDITOR.PAGE_FONTCOLOR_HINT
+
+                    header.allowcomments:
+                      type: toggle
+                      name: allowcomments
+                      label: PLUGIN_STUDIOEDITOR.PAGE_COMMENTS
+                      help: PLUGIN_STUDIOEDITOR.PAGE_COMMENTS_HINT
+                      default: 0
+                      highlight: 0
+                      validate:
+                        type: bool
+                      options:
+                        1: PLUGIN_STUDIOEDITOR.YES
+                        0: PLUGIN_STUDIOEDITOR.NO
+
+                column3:
+                  type: column
+
+                  fields:
+                    header.fontsize:
+                      type: number
+                      name: fontsize
+                      size: small
+                      append: em
+                      id: preview-fontsize
+                      default: 1.0
+                      label: PLUGIN_STUDIOEDITOR.FONT_SIZE
+                      help: PLUGIN_STUDIOEDITOR.FONT_SIZE_HINT
+                      validate:
+                        min: 0.25
+                        max: 5.0
+                        step: 0.05
+                        type: float
+
+                    header.resizeall:
+                      replace@: true
+                      type: studiodefaulttoggle
+                      name: resizeall
+                      label: PLUGIN_STUDIOEDITOR.PAGE_RESIZE_IMAGES
+                      help: PLUGIN_STUDIOEDITOR.PAGE_RESIZE_IMAGES_HINT
+                      highlight: 0
+                      default: 0
+                      validate:
+                        type: bool
+                      options:
+                        1: PLUGIN_STUDIOEDITOR.YES
+                        0: PLUGIN_STUDIOEDITOR.NO
+
         advanced:
-          ordering@: options
           type: tab
           title: PLUGIN_ADMIN.ADVANCED
 
@@ -76,12 +204,272 @@ form:
                 column1:
                   type: column
                   fields:
+
+                    settings:
+                      type: section
+                      title: PLUGIN_ADMIN.SETTINGS
+                      underline: true
+
+                    folder:
+                      type: folder-slug
+                      label: PLUGIN_ADMIN.FOLDER_NAME
+                      validate:
+                        rule: slug
+
                     route:
                       type: parents
                       label: PLUGIN_ADMIN.PARENT
                       classes: fancy
+
+                    name:
+                      type: select
+                      classes: fancy
+                      label: PLUGIN_ADMIN.PAGE_FILE
+                      help: PLUGIN_ADMIN.PAGE_FILE_HELP
+                      default: default
+                      data-options@: '\Grav\Common\Page\Pages::pageTypes'
+
+                    header.body_classes:
+                      type: text
+                      label: PLUGIN_ADMIN.BODY_CLASSES
+
+
+                column2:
+                  type: column
+
+                  fields:
+                    order_title:
+                      type: section
+                      title: PLUGIN_ADMIN.ORDERING
+                      underline: true
+
+                    ordering:
+                      type: toggle
+                      label: PLUGIN_ADMIN.FOLDER_NUMERIC_PREFIX
+                      help: PLUGIN_ADMIN.FOLDER_NUMERIC_PREFIX_HELP
+                      highlight: 1
+                      options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
                       validate:
-                        required: false
+                        type: bool
+
+                    order:
+                      type: order
+                      label: PLUGIN_ADMIN.SORTABLE_PAGES
+                      sitemap:
+
+            overrides:
+              type: section
+              title: PLUGIN_ADMIN.OVERRIDES
+              underline: true
+
+              fields:
+
+                header.dateformat:
+                  toggleable: true
+                  type: select
+                  size: medium
+                  selectize:
+                    create: true
+                  label: PLUGIN_ADMIN.DEFAULT_DATE_FORMAT
+                  help: PLUGIN_ADMIN.DEFAULT_DATE_FORMAT_HELP
+                  placeholder: PLUGIN_ADMIN.DEFAULT_DATE_FORMAT_PLACEHOLDER
+                  data-options@: '\Grav\Common\Utils::dateFormats'
+                  validate:
+                    type: string
+
+                header.menu:
+                  type: text
+                  label: PLUGIN_ADMIN.MENU
+                  toggleable: true
+                  help: PLUGIN_ADMIN.MENU_HELP
+
+                header.slug:
+                  type: text
+                  label: PLUGIN_ADMIN.SLUG
+                  toggleable: true
+                  help: PLUGIN_ADMIN.SLUG_HELP
+                  validate:
+                    message: PLUGIN_ADMIN.SLUG_VALIDATE_MESSAGE
+                    rule: slug
+
+                header.redirect:
+                  type: text
+                  label: PLUGIN_ADMIN.REDIRECT
+                  toggleable: true
+                  help: PLUGIN_ADMIN.REDIRECT_HELP
+
+                header.process:
+                  type: checkboxes
+                  label: PLUGIN_ADMIN.PROCESS
+                  toggleable: true
+                  config-default@: system.pages.process
+                  default:
+                    markdown: true
+                    twig: false
+                  options:
+                    markdown: Markdown
+                    twig: Twig
+                  use: keys
+
+                header.twig_first:
+                  type: toggle
+                  toggleable: true
+                  label: PLUGIN_ADMIN.TWIG_FIRST
+                  help: PLUGIN_ADMIN.TWIG_FIRST_HELP
+                  highlight: 0
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+
+                header.never_cache_twig:
+                  type: toggle
+                  toggleable: true
+                  label: PLUGIN_ADMIN.NEVER_CACHE_TWIG
+                  help: PLUGIN_ADMIN.NEVER_CACHE_TWIG_HELP
+                  highlight: 0
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+
+                header.child_type:
+                  type: select
+                  toggleable: true
+                  label: PLUGIN_ADMIN.DEFAULT_CHILD_TYPE
+                  default: default
+                  placeholder: PLUGIN_ADMIN.USE_GLOBAL
+                  data-options@: '\Grav\Common\Page\Pages::types'
+
+                header.routable:
+                  type: toggle
+                  toggleable: true
+                  label: PLUGIN_ADMIN.ROUTABLE
+                  help: PLUGIN_ADMIN.ROUTABLE_HELP
+                  highlight: 1
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
+
+                header.cache_enable:
+                  type: toggle
+                  toggleable: true
+                  label: PLUGIN_ADMIN.CACHING
+                  highlight: 1
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
+
+                header.visible:
+                  type: toggle
+                  toggleable: true
+                  label: PLUGIN_ADMIN.VISIBLE
+                  help: PLUGIN_ADMIN.VISIBLE_HELP
+                  highlight: 1
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
+
+                header.debugger:
+                  type: toggle
+                  toggleable: true
+                  label: PLUGIN_ADMIN.DEBUGGER
+                  help: PLUGIN_ADMIN.DEBUGGER_HELP
+                  highlight: 1
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
+
+                header.template:
+                  type: text
+                  toggleable: true
+                  label: PLUGIN_ADMIN.DISPLAY_TEMPLATE
+
+                header.append_url_extension:
+                  type: text
+                  label: PLUGIN_ADMIN.APPEND_URL_EXT
+                  toggleable: true
+                  help: PLUGIN_ADMIN.APPEND_URL_EXT_HELP
+
+            routes_only:
+              type: section
+              title: PLUGIN_ADMIN.ROUTE_OVERRIDES
+              underline: true
+
+              fields:
+
+                header.redirect_default_route:
+                  type: toggle
+                  toggleable: true
+                  label: PLUGIN_ADMIN.REDIRECT_DEFAULT_ROUTE
+                  help: PLUGIN_ADMIN.REDIRECT_DEFAULT_ROUTE_HELP
+                  config-highlight@: system.pages.redirect_default_route
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+
+                header.routes.default:
+                  type: text
+                  toggleable: true
+                  label: PLUGIN_ADMIN.ROUTE_DEFAULT
+
+                header.routes.canonical:
+                  type: text
+                  toggleable: true
+                  label: PLUGIN_ADMIN.ROUTE_CANONICAL
+
+                header.routes.aliases:
+                  type: array
+                  toggleable: true
+                  value_only: true
+                  size: large
+                  label: PLUGIN_ADMIN.ROUTE_ALIASES
+
+
+            admin_only:
+              type: section
+              title: PLUGIN_ADMIN.ADMIN_SPECIFIC_OVERRIDES
+              underline: true
+
+              fields:
+
+                header.admin.children_display_order:
+                  type: select
+                  label: PLUGIN_ADMIN.ADMIN_CHILDREN_DISPLAY_ORDER
+                  help: PLUGIN_ADMIN.ADMIN_CHILDREN_DISPLAY_ORDER_HELP
+                  toggleable: true
+                  classes: fancy
+                  default: 'collection'
+                  options:
+                    'default': 'Ordered by Folder name (default)'
+                    'collection': 'Ordered by Collection definition'
+
+
+                header.order_by:
+                  type: hidden
+
+                header.order_manual:
+                  type: hidden
+                  validate:
+                    type: commalist
+
+                blueprint:
+                  type: blueprint
+
 
         options:
           type: tab
@@ -137,32 +525,17 @@ form:
 
         help:
           type: tab
-          ordering@: 100
-          title: PLUGIN_STUDIOEDITOR.TAB_HELP
+          ordering@: 5
+          title: Help
           fields:
-            helptabs:
-              type: tabs
-              fields:
-                editor:
-                  type: tab
-                  title: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR
-                  fields:
-                    editor01:
-                      type: display
-                      size: large
-                      label: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_01_LABEL
-                      markdown: true
-                      content: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_01_CONTENT                        
-                    editor02:
-                      type: display
-                      size: large
-                      label: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_02_LABEL
-                      markdown: true
-                      content: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_02_CONTENT                        
-                    editor03:
-                      type: display
-                      size: large
-                      label: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_03_LABEL
-                      markdown: true
-                      content: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_03_CONTENT                        
+            helpone:
+              type: display
+              size: large
+              label: General
+              markdown: true
+              content: "Help soon to come. In the meantime, please see what the labels offer. Many of them expand contextual help when you hover over them with the mouse cursor."
+
+        avanced:
+          ordering@: 6
+
 
