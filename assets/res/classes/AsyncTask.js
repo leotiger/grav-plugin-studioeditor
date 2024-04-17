@@ -50,7 +50,7 @@ define([
     var currentTaskStartTime = 0;
     AsyncTask.prototype.chain = function(callback) {
         currentTaskStartTime = utils.currentTime;
-        utils.logStackTrace();
+        //utils.logStackTrace();
         if(this.finished === true) {
             return;
         }
@@ -80,7 +80,7 @@ define([
      * ends the task by throwing an exception.
      */
     AsyncTask.prototype.error = function(error) {
-        utils.logStackTrace();
+        //utils.logStackTrace();
         if(this.finished === true) {
             return;
         }

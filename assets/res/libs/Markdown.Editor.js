@@ -26,7 +26,7 @@
         underline: "Underline <u> Ctrl/Cmd+E",
         underlineexample: "underlined text",
         strikethrough: "Sriketrough <del> Ctrl/Cmd+D",
-        italicexample: "emphasized text",
+        strikethroughexample: "strikethrough text",
 
         link: "Hyperlink <a> Ctrl/Cmd+L",
         linkdescription: "enter link description here",

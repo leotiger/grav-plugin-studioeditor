@@ -21,6 +21,20 @@
 }
 
 .extension-preview-buttons .dropdown-menu {
-  background-color: darkgray !important;
+  background-color: #1c5180 !important;
   font-weight: bold !important;
+}
+
+.extension-preview-buttons h1, .extension-preview-buttons h2, .extension-preview-buttons h3, .extension-preview-buttons h4, .extension-preview-buttons h5 {
+  color: #BFC6D0 !important;
+}
+
+.wmd-panel input[type="number"] {
+  background: #fff;
+  color: #000;
+}
+
+.studio-media-field .form-label div {
+    position: relative;
+    right: 35px;
 }

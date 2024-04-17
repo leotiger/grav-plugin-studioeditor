@@ -1,12 +1,16 @@
 {
     "name": "hammerjs",
-    "version": "1.0.11",
+    "license": "MIT",
     "main": "hammer.js",
     "ignore": [
         "tests",
+        "src",
+        ".bowerrc",
+        ".gitignore",
+        ".jscsrc",
+        ".jshintrc",
+        ".travis.yml",
         "component.json",
-        "package.json",
-        "examples",
-        "src"
+        "package.json"
     ]
 }

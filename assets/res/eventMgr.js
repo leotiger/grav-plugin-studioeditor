@@ -8,13 +8,11 @@ define([
 	"classes/Extension",
 	"settings",
 	"text!html/settingsExtensionsAccordion.html",
-	"extensions/yamlFrontMatterParser",
 	"extensions/markdownSectionParser",
 	"extensions/partialRendering",
 	"extensions/buttonMarkdownSyntax",
 	"extensions/dialogAbout",
 	"extensions/workingIndicator",
-	"extensions/notifications",
 	"extensions/umlDiagrams",
 	"extensions/markdownExtra",
 	"extensions/toc",
@@ -30,7 +28,6 @@ define([
 	"extensions/shortcuts",
 	"extensions/findReplace",
 	"extensions/htmlSanitizer",
-	//"bootstrap",
 	"modal",
 	"jquery-waitforimages"
 ], function($, _, crel, mousetrap, utils, logger, Extension, settings, settingsExtensionsAccordionHTML) {
@@ -204,12 +201,12 @@ define([
 	addEventHook("onEditorPopover");
 
 	// Operations on comments
-	addEventHook("onDiscussionCreated");
-	addEventHook("onDiscussionRemoved");
-	addEventHook("onCommentsChanged");
+	//addEventHook("onDiscussionCreated");
+	//addEventHook("onDiscussionRemoved");
+	//addEventHook("onCommentsChanged");
 
 	// Refresh twitter buttons
-	addEventHook("onTweet");
+	//addEventHook("onTweet");
 
 
 	var onPreviewFinished = createEventHook("onPreviewFinished");

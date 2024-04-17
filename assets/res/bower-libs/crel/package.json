@@ -5,10 +5,32 @@
   "tags": [
     "DOM"
   ],
-  "version": "1.0.0",
+  "version": "4.2.1",
   "main": "crel.js",
+  "module": "crel.es.js",
   "dependencies": {},
   "devDependencies": {
+    "@rollup/plugin-buble": "^0.20.0",
+    "browserify": "^16.2.3",
+    "rollup": "^1.26.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "tape": "^4.9.2",
+    "tape-run": "^6.0.1",
+    "terser": "^3.14.1"
+  },
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "crel.js",
+    "crel.min.js",
+    "crel.es.js",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "browserify ./test/index.js | tape-run",
+    "testBuild": "browserify ./test/index.js > ./test/index.browser.js",
+    "build": "terser crel.js -o crel.min.js --warn --ecma 6 -c evaluate=false,pure_getters -m && rollup -c",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -17,5 +39,11 @@
   "bugs": {
     "url": "http://github.com/KoryNunn/crel/issues"
   },
-  "contributors": []
+  "license": "MIT",
+  "contributors": [],
+  "homepage": "https://github.com/KoryNunn/crel#readme",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": []
 }

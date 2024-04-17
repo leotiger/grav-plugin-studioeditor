@@ -3,9 +3,9 @@ define([
 	"underscore",
 	"storage",	
 	"crel",
-	"xregexp",
-	"FileSaver"	
-], function($, _, storage, crel, XRegExp, saveAs) {
+	"xregexp"
+	//"FileSaver"	
+], function($, _, storage, crel, XRegExp) {
 	var utils = {};
 
 	utils.msie = (function() {
@@ -452,37 +452,7 @@ define([
 		});
 	};
 
-	// Export data on disk
-	
-	utils.saveAs = function(content, filename) {
-		if(saveAs !== undefined && !/constructor/i.test(window.HTMLElement) ) { // safari does not support saveAs 
-			if(_.isString(content)) {
-				content = new Blob([
-					content
-				], {
-					type: "text/plain;charset=utf-8"
-				});
-			}
-			saveAs(content, filename);
-		}
-		else {
-			if(_.isString(content)) {
-				var uriContent = "data:application/octet-stream;base64," + utils.encodeBase64(content);
-				window.open(uriContent, 'file');
-			}
-			else {
-				var reader = new FileReader();
-				reader.onload = function(event) {
-					utils.redirectConfirm('You are opening a PDF document.', function() {
-						var uriContent = 'data:application/pdf;' + event.target.result.substring(event.target.result.indexOf('base64'));
-						window.open(uriContent, 'file');
-					});
-				};
-				reader.readAsDataURL(content); // Convert the blob to base64
-			}
-		}
-	};
-	
+
 	// Time shared by others modules
 	utils.updateCurrentTime = function() {
 		utils.currentTime = Date.now();

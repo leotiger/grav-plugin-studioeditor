@@ -2,6 +2,7 @@
 /*global requirejs */
 requirejs.config({
 	waitSeconds: 0,
+        /*
 	packages: [
 		{
 			name: 'css',
@@ -14,12 +15,11 @@ requirejs.config({
 			main: 'less'
 		}
 	],
+         */
 	paths: {
-		//jquery: 'bower-libs/jquery/jquery',
 		jquery: '/system/assets/jquery/jquery-3.x.min.js?bf92ee3f1c',
 		underscore: 'bower-libs/underscore/underscore',
 		crel: 'bower-libs/crel/crel',
-		jgrowl: 'bower-libs/jgrowl/jquery.jgrowl',
 		mousetrap: 'bower-libs/mousetrap/mousetrap',
 		'mousetrap-record': 'bower-libs/mousetrap/plugins/record/mousetrap-record',
 		toMarkdown: 'bower-libs/to-markdown/src/to-markdown',
@@ -30,36 +30,21 @@ requirejs.config({
 		'google-code-prettify': 'bower-libs/google-code-prettify/src/prettify',
 		highlightjs: 'libs/highlight/highlight.pack',
 		'jquery-waitforimages': 'bower-libs/waitForImages/src/jquery.waitforimages',
-		'jquery-ui': 'bower-libs/jquery-ui/ui/jquery-ui',
-		'jquery-ui-core': 'bower-libs/jquery-ui/ui/jquery.ui.core',
-		'jquery-ui-widget': 'bower-libs/jquery-ui/ui/jquery.ui.widget',
-		'jquery-ui-mouse': 'bower-libs/jquery-ui/ui/jquery.ui.mouse',
-		'jquery-ui-draggable': 'bower-libs/jquery-ui/ui/jquery.ui.draggable',
-		'jquery-ui-effect': 'bower-libs/jquery-ui/ui/jquery.ui.effect',
-		'jquery-ui-effect-slide': 'bower-libs/jquery-ui/ui/jquery.ui.effect-slide',
-		'requirejs-text': 'bower-libs/requirejs-text/text',
-		FileSaver: 'bower-libs/FileSaver/FileSaver',		
-		css_browser_selector: 'bower-libs/css_browser_selector/css_browser_selector',
+		//css_browser_selector: 'bower-libs/css_browser_selector/css_browser_selector',
 		'pagedown-extra': 'bower-libs/pagedown-extra/node-pagedown-extra',
 		pagedownExtra: 'bower-libs/pagedown-extra/Markdown.Extra',
 		pagedown: 'libs/Markdown.Editor',
-		'require-css': 'bower-libs/require-css/css',
+		//'require-css': 'bower-libs/require-css/css',
 		xregexp: 'bower-libs/xregexp/xregexp-all',
-		yaml: 'bower-libs/yaml.js/bin/yaml',
-		'yaml.js': 'bower-libs/yaml.js',
-		'yaml-js': 'bower-libs/yaml.js/bin/yaml',
-		css: 'bower-libs/require-css/css',
-		'css-builder': 'bower-libs/require-css/css-builder',
+		//css: 'bower-libs/require-css/css',
+		//'css-builder': 'bower-libs/require-css/css-builder',
 		normalize: 'bower-libs/require-css/normalize',
 		prism: 'bower-libs/prism/prism',
 		'prism-core': 'bower-libs/prism/components/prism-core',
-		MutationObservers: 'bower-libs/MutationObservers/MutationObserver',
-		WeakMap: 'bower-libs/WeakMap/weakmap',
 		rangy: 'bower-libs/rangy/rangy-core',
 		'rangy-cssclassapplier': 'bower-libs/rangy/rangy-cssclassapplier',
 		diff_match_patch: 'bower-libs/google-diff-match-patch-js/diff_match_patch',
 		diff_match_patch_uncompressed: 'bower-libs/google-diff-match-patch-js/diff_match_patch_uncompressed',
-		jsondiffpatch: 'bower-libs/jsondiffpatch/build/bundle',
 		hammerjs: 'bower-libs/hammerjs/hammer',
 		Diagram: 'bower-libs/js-sequence-diagrams/src/sequence-diagram',
 		'diagram-grammar': 'bower-libs/js-sequence-diagrams/build/diagram-grammar',
@@ -69,7 +54,7 @@ requirejs.config({
 		'to-markdown': 'bower-libs/to-markdown/src/to-markdown',
 		waitForImages: 'bower-libs/waitForImages/dist/jquery.waitforimages',
 		MathJax: 'bower-libs/MathJax/MathJax',		
-		alertify: 'bower-libs/alertify.js/lib/alertify'
+		//alertify: 'bower-libs/alertify.js/lib/alertify'
 	},
 	shim: {
 		underscore: {
@@ -77,21 +62,12 @@ requirejs.config({
 		},		
 		mathjax: [
 			'libs/mathjax_init'
-		],		
-		jgrowl: {
-			deps: [
-				'jquery'
-			],
-			exports: 'jQuery.jGrowl'
-		},		
+		],
 		diff_match_patch_uncompressed: {
 			exports: 'diff_match_patch'
 		},
-		jsondiffpatch: [
-			'diff_match_patch_uncompressed'
-		],		
 		rangy: {
-			exports: 'rangy'
+                    exports: 'rangy'
 		},
 		'rangy-cssclassapplier': [
 			'rangy'
@@ -124,9 +100,6 @@ requirejs.config({
 			],
 			exports: 'toMarkdown'
 		},
-		MutationObservers: [
-			'WeakMap'
-		],
 		highlightjs: {
 			exports: 'hljs'
 		},	
@@ -180,11 +153,12 @@ window.viewerMode = /(^| )viewer($| )/.test(document.body.className);
 window.theme = localStorage.themeV4 || 'default';
 window.pagedownEditor = null;
 window.activeContent = 1;//1 = body; 2 = intro; 3= summary
+/*
 var themeModule = "less!themes/" + window.theme;
 if(window.baseDir.indexOf('-min') !== -1) {
 	themeModule = "css!themes/" + window.theme;
 }
-
+*/
 // RequireJS entry point. By requiring synchronizer, publisher, sharing and
 // media-importer, we are actually loading all the modules
 require([
@@ -193,9 +167,9 @@ require([
 	"core",
 	"eventMgr",
 	"fileMgr",
-	"css",
-	"rangy-cssclassapplier",
-	themeModule
+	//"css",
+	"rangy-cssclassapplier"
+	//themeModule
 ], function($, rangy, core, eventMgr) {
 
 	if(window.noStart) {

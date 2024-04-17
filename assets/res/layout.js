@@ -158,8 +158,9 @@ define([
             resizeAll();
         };
     };
+    
     DomObject.prototype.initHammer = function (drag) {
-        this.hammer = hammer(this.elt, {
+        this.hammer = new hammer(this.elt, {
             drag: drag ? true : false,
             drag_max_touches: 0,
             gesture: false,
@@ -171,7 +172,7 @@ define([
             transform: false
         });
     };
-
+    
     var maxWidthMap = [
         {screenWidth: 0, maxWidth: 600 * settings.maxWidthRatio},
         {screenWidth: 1000, maxWidth: 700 * settings.maxWidthRatio},
@@ -575,7 +576,7 @@ define([
                 resizeAll();
             });
         }
-
+        
         previewButtons.initHammer(true);
         previewButtons.adjustPosition = function () {
             if (!previewButtons.isDragged) {
@@ -589,8 +590,8 @@ define([
             this.y > 0 && (this.y = 0);
             this.applyCss();
         };
-
-
+        
+        
         var buttonsInitialCoord;
         previewButtons.hammer.on('dragstart', function () {
             previewButtons.isOpen = true;
@@ -610,7 +611,7 @@ define([
             wrapperL2.$elt.removeClass('dragging');
             previewButtons.$elt.find('.btn-group').toggleClass('dropup', windowSize.height / 2 > -previewButtons.y);
         });
-
+        
         // Configure Mousetrap
         mousetrap.stopCallback = function () {
             return menuPanel.isOpen || documentPanel.isOpen || isModalShown;

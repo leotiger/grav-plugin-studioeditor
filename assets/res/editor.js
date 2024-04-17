@@ -8,12 +8,10 @@ define([
 	'eventMgr',
 	'prism-core',
 	'diff_match_patch_uncompressed',
-	'jsondiffpatch',
 	'crel',
 	'rangy',
-	'MutationObservers',
 	'libs/prism-markdown'
-], function($, _, utils, settings, eventMgr, Prism, diff_match_patch, jsondiffpatch, crel, rangy) {
+], function($, _, utils, settings, eventMgr, Prism, diff_match_patch_uncompressed, crel, rangy) {
 
 	var editor = {};
 	var scrollTop = 0;
@@ -100,20 +98,7 @@ define([
 
 	var watcher = new Watcher();
 	editor.watcher = watcher;
-
-	var diffMatchPatch = new diff_match_patch();
-	var jsonDiffPatch = jsondiffpatch.create({
-		objectHash: function(obj) {
-			return JSON.stringify(obj);
-		},
-		arrays: {
-			detectMove: false
-		},
-		textDiff: {
-			minLength: 9999999
-		}
-	});
-
+        var diffMatchPatch = new diff_match_patch();
 	function SelectionMgr() {
 		var self = this;
 		var lastSelectionStart = 0, lastSelectionEnd = 0;
@@ -576,26 +561,6 @@ define([
 				selectionMgr.setSelectionStartEnd(selectionStart, selectionEnd);
 				selectionMgr.updateSelectionRange();
 				selectionMgr.updateCursorCoordinates(true);
-				var discussionListJSON = fileDesc.discussionListJSON;
-				if(discussionListJSON != state.discussionListJSON) {
-					var oldDiscussionList = fileDesc.discussionList;
-					fileDesc.discussionListJSON = state.discussionListJSON;
-					var newDiscussionList = fileDesc.discussionList;
-					var diff = jsonDiffPatch.diff(oldDiscussionList, newDiscussionList);
-					var commentsChanged = false;
-					_.each(diff, function(discussionDiff, discussionIndex) {
-						if(!_.isArray(discussionDiff)) {
-							commentsChanged = true;
-						}
-						else if(discussionDiff.length === 1) {
-							eventMgr.onDiscussionCreated(fileDesc, newDiscussionList[discussionIndex]);
-						}
-						else {
-							eventMgr.onDiscussionRemoved(fileDesc, oldDiscussionList[discussionIndex]);
-						}
-					});
-					commentsChanged && eventMgr.onCommentsChanged(fileDesc);
-				}
 			});
 
 			selectionStartBefore = selectionStart;
@@ -644,17 +609,6 @@ define([
 
 	var undoMgr = new UndoMgr();
 	editor.undoMgr = undoMgr;
-
-	function onComment() {
-		if(watcher.isWatching === true) {
-			undoMgr.currentMode = undoMgr.currentMode || 'comment';
-			undoMgr.saveState();
-		}
-	}
-
-	eventMgr.addListener('onDiscussionCreated', onComment);
-	eventMgr.addListener('onDiscussionRemoved', onComment);
-	eventMgr.addListener('onCommentsChanged', onComment);
 
 	var triggerSpellCheck = _.debounce(function() {
 		var selection = window.getSelection();

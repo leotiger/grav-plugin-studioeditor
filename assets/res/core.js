@@ -279,16 +279,7 @@ define([
 	core.onReady = function() {
 		// Add RTL class
 		document.body.className += ' ' + settings.editMode;
-		
-		//if(window.viewerMode === true) {
-			
-		//	document.body.innerHTML = bodyViewerHTML;
-		//}
-		//else {
-			//$('#modalcontainer').html( bodyEditorModalsHTML );
-			$('body').append( bodyEditorModalsHTML );
-			//document.body.innerHTML = bodyEditorModalsHTML;
-		//}
+                $('body').append( bodyEditorModalsHTML );
 
 		// Initialize utils library
 		utils.init();
@@ -424,66 +415,7 @@ define([
 		$(".action-import-docs-settings").click(function() {
 			$("#input-file-import-docs-settings").click();
 		});
-		var newstorage;
-		/*
-		$("#input-file-import-docs-settings").change(function(evt) {
-			var files = (evt.dataTransfer || evt.target).files;
-			$(".modal-settings").modal("hide");
-			_.each(files, function(file) {
-				var reader = new FileReader();
-				reader.onload = (function(importedFile) {
-					return function(e) {
-						try {
-							newstorage = JSON.parse(e.target.result);
-							// Compare storage version
-							var newVersion = parseInt(newstorage.version.match(/^v(\d+)$/)[1], 10);
-							var currentVersion = parseInt(storage.version.match(/^v(\d+)$/)[1], 10);
-							if(newVersion > currentVersion) {
-								// We manage storage upgrade, not downgrade
-								eventMgr.onError("Incompatible version. Please upgrade StackEdit.");
-							} else {
-								$('.modal-import-docs-settings').modal('show');
-							}
-						}
-						catch(exc) {
-							eventMgr.onError("Wrong format: " + importedFile.name);
-						}
-						$("#input-file-import-docs-settings").val('');
-					};
-				})(file);
-				reader.readAsText(file);
-			});
-		});
-		$(".action-import-docs-settings-confirm").click(function() {
-			storage.clear();
-			var allowedKeys = /^file\.|^folder\.|^publish\.|^settings$|^sync\.|^google\.|^author\.|^themeV4$|^version$/;
-			_.each(newstorage, function(value, key) {
-				if(allowedKeys.test(key)) {
-					storage[key] = value;
-				}
-			});
-			window.location.reload();
-		});
-		
-		// Export settings
-		$(".action-export-docs-settings").click(function() {
-			utils.saveAs(JSON.stringify(storage), "StackEdit local storage.json");
-		});
 
-		$(".action-default-settings").click(function() {
-			storage.removeItem("settings");
-			storage.removeItem("theme");
-			if(!settings.dropboxFullAccess) {
-				storage.removeItem('dropbox.lastChangeId');
-			}
-			window.location.reload();
-		});
-
-		$(".action-app-reset").click(function() {
-			storage.clear();
-			window.location.reload();
-		});
-		*/
 		// Reset inputs
 		$(".action-reset-input").click(function() {
 			utils.resetModalInputs();

@@ -224,9 +224,14 @@
             if ($('#preview-bgcolor') && $('#preview-bgcolor').val() && $('#preview-bgcolor').val().length) {
                 $('#preview-contents').css('background', $('#preview-bgcolor').val());
             }
-            if ($('#preview-fontsize') && $('#preview-fontsize').val() && $('#preview-fontsize').val().length) {
-                $('#preview-contents').css('font-size', $('#preview-fontsize').val() + 'em');
+            if ($('#wmd-fontsize') && $('#wmd-fontsize').val() && $('#wmd-fontsize').val().length) {
+                $('#wmd-contents').css('font-size', $('#wmd-fontsize').val() + 'em');
+            } else {
+                if ($('#preview-fontsize') && $('#preview-fontsize').val() && $('#preview-fontsize').val().length) {
+                    $('#preview-contents').css('font-size', $('#preview-fontsize').val() + 'em');
+                }                
             }
+            
         }
         $('#preview-fontcolor').on('blur', function (event) {
             if ($('#preview-fontcolor').val().length) {
@@ -246,9 +251,17 @@
             if ($('#preview-fontsize').val().length) {
                 $('#preview-contents').css('font-size', $('#preview-fontsize').val() + 'em');
             } else {
-                $('#preview-contents').css('font-size', '');
+                $('#preview-contents').css('font-size', '1.2em');
             }
         });
+        $('#wmd-fontsize').on('change', function (event) {
+            if ($('#wmd-fontsize').val().length) {
+                $('#preview-contents').css('font-size', $('#wmd-fontsize').val() + 'em');
+            } else {
+                $('#preview-contents').css('font-size', '1.2em');
+            }
+        });
+        
         $('#grav-dropzone').delegate('.dz-success', 'mouseenter', function (event) {
             let target = $(event.currentTarget).find('.dz-filename span');
             if (target.length) {
