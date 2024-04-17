@@ -11,9 +11,6 @@ keywords: admin, plugin, manager, panel, stackedit, markdown, editor, content ma
 dependencies:
   - { name: grav, version: '>=1.7.0' }    
   - { name: admin, version: '~1.10' }
-  - { name: smartypants, version: '~2.5' }
-  - { name: prism-highlight, version: '~3.0' }  
-  - { name: webp, version: '~1.4' }    
   
 form:
   validation: loose
