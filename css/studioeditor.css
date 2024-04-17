@@ -32,9 +32,10 @@
 .wmd-panel input[type="number"] {
   background: #fff;
   color: #000;
+  font-size: 0.8em;
 }
 
 .studio-media-field .form-label div {
     position: relative;
-    right: 35px;
+    right: 35px;    
 }

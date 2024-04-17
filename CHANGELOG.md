@@ -1,3 +1,12 @@
+# v1.1.8
+## 04/17/2024
+
+1. [](#improved)
+    * Removal and update of js libraries in bower-libs where possible
+    * Preview font size selector added
+    * Blue theme color scheme for StudioEditor instance implemented
+    * Initial code cleanup and consolidation
+
 # v1.1.7
 ## 04/15/2024
 
