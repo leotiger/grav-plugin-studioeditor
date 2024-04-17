@@ -1,0 +1,53 @@
+PLUGIN_STUDIOEDITOR:
+  CREDITS: Acerca
+  CREDITS_NOTES: 'Soporte y sugerencias'
+  CREDITS_NOTES_TEXT: 'Puede contactarme por correo a [Uli Hake](mailto:uli.hake@gmail.com)'
+  CREDITS_THIRDPARTY: 'Cosas de terceros'
+  CREDITS_THIRDPARTY_TEXT: "- [StackEdit.io](https://stackedit.io)\n- [Resize Images](https://github.com/fredrikekelund/grav-plugin-resize-images)"
+  DATA_TYPES: 'Tipos de datos'
+  FRONTMATTER: Frontmatter
+  IMAGE_QUALITY: 'Calidad de imagen'
+  IMAGE_QUALITY_HINT: 'Calidad de imágenes jpeg (.jpg, .jpeg). Por favor, especifique algo entre 10 y 100. 100 representa la mejor calidad.'
+  ITEMS: Entradas
+  ITEMS_LIST: 'Lista de entradas'
+  ITEM_DETAILS: 'Detalles de la entrada'
+  MARKDOWN_ALIGN: 'Markdown Block Alineación'
+  MARKDOWN_BLOCKALIGN_PROCESS: 'Procesar alineación'
+  MARKDOWN_EXTRAS: 'Markdown Extras'
+  MARKDOWN_EXTRAS_CSS: 'Carregar css de extras'
+  MARKDOWN_NOTICES: 'Markdown Anotaciones'
+  MARKDOWN_NOTICES_PROCESS: 'Procesar anotaciones'
+  MATHJAX_BUILTIN_CSS: 'Utilizar css proporcionado'
+  MATHJAX_BUILTIN_JS: 'Utlizar configuración interna de MathJax'
+  MATHJAX_PROCESS: 'Procesar MathJax'
+  MATHJAX_TITLE: MathJax
+  MATHJAX_URL: 'MathJax.js URL'
+  MATHJAX_URL_HELP: 'Especifique la Url de MathJax o déjelo como está para utilizar la configurada en el plguin'
+  MATHJAX_WEIGHT: 'Orden de ejecución'
+  MATHJAX_WEIGHT_HELP: 'Para procesar los contenidos directamente después de "SmartyPants" especifique un valor negativo.'
+  MEDIA_WIDTH: 'Anchura del fichero multimedia'
+  MEDIA_WIDTH_HINT: 'La anchura máxima de los ficheros multimedia que está facilitando.'
+  'NO': 'No'
+  PAGE_AUTHOR: 'Autor de la página'
+  PAGE_AUTHOR_HINT: 'Para facilitar el autor del contenido de esta página.'
+  PAGE_DATE: 'Fecha de publicación'
+  PAGE_DATE_HINT: 'Especificar la fecha de publicación.'
+  PAGE_RESIZE_IMAGES: 'Borrar y regenerar las variaciones de las imágenes.'
+  PAGE_RESIZE_IMAGES_HINT: 'Borrar las variaciones y restaurar las imágenes originales.'
+  PAGE_TITLE: 'Título de la página'
+  PAGE_TITLE_HINT: 'Aquí se especifica el título de su página.'
+  RESIZE_IMAGES: 'Generar las variaciones de las imágenes'
+  STUDIOEDITOR: StudioEditor
+  STUDIOEDITOR_TAB: StudioEditor
+  TAB_HELP: Ayuda
+  TAB_HELP_EDITOR: Editor
+  TAB_HELP_EDITOR_01_CONTENT: 'Por favor, fíjese en lo que ofrece la etiqueta. Muchas de ellas exponen ayuda contextual colocando el cursor sobre el ícono de ayuda.'
+  TAB_HELP_EDITOR_01_LABEL: 'Ayuda contextual'
+  TAB_HELP_EDITOR_02_CONTENT: 'Si guarda la página desde una pestaña que no es la del contenido puede que el editor no se inicializa correctamente. En este caso recargue la página con CTRL+R con la pestaña de contenido activada.'
+  TAB_HELP_EDITOR_02_LABEL: Incidencias
+  TAB_HELP_EDITOR_03_CONTENT: 'El editor soporta muchos atajos útiles. Dentro del editor puede utilizar los atajos estándard para negrita, cursiva, etc., e.g. CTRL+B, CTRL+I. Si el focus está fuera de la zona del editor tiene que utilizar CTRL+SHIFT+SHORTCODE. Los atajos que funcionan fuera de la zona del editor funcionan también adentro. '
+  TAB_HELP_EDITOR_03_LABEL: Atajos
+  TAB_HELP_EXTENT: Extender
+  TAB_HELP_EXTENT_01_CONTENT: "Studioeditor incluye dos tipos de campos de formulario especiales:\n\n- studioeditor \n- studiopagemedia \n\nEstos campos de formulario deben usarse juntos para el campo de edición de contenido y el cargador de medios acociado en una plantilla. Tenga en cuenta que no puede colocar más de un **studioeditor** dentro de su plantilla bluprint. El complemento Studioeditor sustituye el modelo predeterminado de GRAV. Si echa en falta un campo del formulario, plantee una incidencia en [Github](https://github.com/leotiger/grav-plugin-studioeditor). Todos las plantillas de su tema que amplían el plantilla por defecto incluyen ya el editor **studioeditor** y el **selector de archivos studiopagemedia**."
+  TAB_HELP_EXTENT_01_LABEL: 'Extender las plantillas de su tema'
+  'YES': Sí
