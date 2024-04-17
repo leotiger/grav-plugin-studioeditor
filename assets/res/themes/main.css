@@ -1548,8 +1548,8 @@ input[type="button"].btn-block {
   }
 }
 .navbar-default {
-  background-color: #4a4a4a;
-  border-color: #393939;
+  background-color: #1c5180;
+  border-color: #164065;
 }
 .navbar-default .navbar-brand {
   color: #777;
@@ -1574,7 +1574,7 @@ input[type="button"].btn-block {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #555;
-  background-color: #393939;
+  background-color: #164065;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -1594,12 +1594,12 @@ input[type="button"].btn-block {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #393939;
+  border-color: #164065;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #393939;
+  background-color: #164065;
   color: #555;
 }
 @media (max-width: 767px) {
@@ -1615,7 +1615,7 @@ input[type="button"].btn-block {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555;
-    background-color: #393939;
+    background-color: #164065;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -4163,7 +4163,7 @@ a.list-group-item:focus {
 .open .btn-success.dropdown-toggle {
   color: #fff !important;
   border-color: rgba(128, 128, 128, 0.1);
-  background-color: #313131 !important;
+  background-color: #133756 !important;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -4702,8 +4702,8 @@ a.input-group-addon {
   right: 0;
   bottom: 0;
   z-index: 40;
-  background-color: #4a4a4a;
-  border: 1px solid #393939;
+  background-color: #1c5180;
+  border: 1px solid #164065;
   border-radius: 4px;
   cursor: move;
 }
@@ -4864,6 +4864,7 @@ a.input-group-addon {
   left: 0;
   width: 32px;
   height: 32px;
+  backgroud-color: #e89d14;
 }
 .layout-resizer.open {
   cursor: e-resize;

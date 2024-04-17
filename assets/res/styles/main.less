@@ -38,6 +38,7 @@
 @tertiary-color: darken(@secondary-desaturated, 15%);
 @tertiary-color-dark: darken(@tertiary-color, 30%);
 @tertiary-color-darker: darken(@tertiary-color, 60%);
+@bg-layout-resizer: @tertiary-bg;
 
 // Panel buttons
 @panel-button-bg-color: #FFF;
@@ -1112,6 +1113,7 @@ a {
 	.layout-panel();
 	width: @resizer-size;
 	height: @resizer-size;
+        backgroud-color: @bg-layout-resizer;
 	&.open {
 		cursor: e-resize;
 		.layout-vertical & {
