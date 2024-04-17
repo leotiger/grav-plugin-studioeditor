@@ -6,6 +6,7 @@
     * Fix markdown notices.
 
 1. [](#improved)
+    * Added section for block text alignment to Markdown guide available inside of StudioEditor and some links for further reading. 
     * Reattach help tab content in default.yaml to content defined in language definitions.
     * Several language definitions added using [Babel](https://github.com/leotiger/grav-plugin-babel). StudioEditor includes now definitions for English, German, Spanish, Catalan and French.
 
