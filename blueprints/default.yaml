@@ -76,109 +76,10 @@ form:
                       style: vertical
                       label: PLUGIN_ADMIN.AUTHOR
 
-                    header.fullwidth:
-                      type: select
-                      name: fullwidth
-                      size: long
-                      label: Page Style
-                      help: Select a page style
-                      default: row
-                      novalidate: true
-                      options:
-                        row: 'Row (Max width: 1008px)'
-                        rowfull: 'Row full (with Grid)'
-                        rowfullfull: 'Row (without Grid)'
-                      validate:
-                        required: false
 
                 column2:
                   type: column
                   fields:
-
-                    header.videoset:
-                      type: filepicker
-                      label: PLUGIN_STUDIOEDITOR.PAGE_BGVIDEO
-                      help: PLUGIN_STUDIOEDITOR.PAGE_BGVIDEO_HINT
-                      name: videoset
-
-                    header.bgimage:
-                      type: filepicker
-                      label: PLUGIN_STUDIOEDITOR.PAGE_BGIMAGE
-                      help: PLUGIN_STUDIOEDITOR.PAGE_BGIMAGE_HINT
-                      name: bgimage
-                      preview_images: true
-
-            columnstwo:
-              type: columns
-
-              fields:
-                column1:
-                  type: column
-
-                  fields:                  
-
-                    header.bgcolor:
-                      type: studiocolorpicker
-                      id: preview-bgcolor
-                      name: bgcolor
-                      label: PLUGIN_STUDIOEDITOR.PAGE_BGCOLOR
-                      help: PLUGIN_STUDIOEDITOR.PAGE_BGCOLOR_HINT
-                    header.shareicons:
-                      type: toggle
-                      name: shareicons
-                      label: PLUGIN_STUDIOEDITOR.PAGE_SHARING
-                      help: PLUGIN_STUDIOEDITOR.PAGE_SHARING_HINT
-                      highlight: 1
-                      validate:
-                        type: bool
-                      options:
-                        1: PLUGIN_STUDIOEDITOR.YES
-                        0: PLUGIN_STUDIOEDITOR.NO
-
-                column2:
-                  type: column
-
-                  fields:
-
-                    header.fontcolor:
-                      type: studiocolorpicker
-                      name: fontcolor
-                      id: preview-fontcolor
-                      label: PLUGIN_STUDIOEDITOR.PAGE_FONTCOLOR
-                      help: PLUGIN_STUDIOEDITOR.PAGE_FONTCOLOR_HINT
-
-                    header.allowcomments:
-                      type: toggle
-                      name: allowcomments
-                      label: PLUGIN_STUDIOEDITOR.PAGE_COMMENTS
-                      help: PLUGIN_STUDIOEDITOR.PAGE_COMMENTS_HINT
-                      default: 0
-                      highlight: 0
-                      validate:
-                        type: bool
-                      options:
-                        1: PLUGIN_STUDIOEDITOR.YES
-                        0: PLUGIN_STUDIOEDITOR.NO
-
-                column3:
-                  type: column
-
-                  fields:
-                    header.fontsize:
-                      type: number
-                      name: fontsize
-                      size: small
-                      append: em
-                      id: preview-fontsize
-                      default: 1.0
-                      label: PLUGIN_STUDIOEDITOR.FONT_SIZE
-                      help: PLUGIN_STUDIOEDITOR.FONT_SIZE_HINT
-                      validate:
-                        min: 0.25
-                        max: 5.0
-                        step: 0.05
-                        type: float
-
                     header.resizeall:
                       replace@: true
                       type: studiodefaulttoggle
@@ -192,6 +93,7 @@ form:
                       options:
                         1: PLUGIN_STUDIOEDITOR.YES
                         0: PLUGIN_STUDIOEDITOR.NO
+
 
         advanced:
           type: tab
@@ -544,9 +446,21 @@ form:
             helpone:
               type: display
               size: large
-              label: General
+              label: TAB_HELP_EDITOR_01_LABEL
               markdown: true
-              content: "Help soon to come. In the meantime, please see what the labels offer. Many of them expand contextual help when you hover over them with the mouse cursor."
+              content: TAB_HELP_EDITOR_01_CONTENT
+            helptwo:
+              type: display
+              size: large
+              label: TAB_HELP_EDITOR_02_LABEL
+              markdown: true
+              content: TAB_HELP_EDITOR_02_CONTENT
+            helpthree:
+              type: display
+              size: large
+              label: TAB_HELP_EDITOR_03_LABEL
+              markdown: true
+              content: TAB_HELP_EDITOR_03_CONTENT
 
         avanced:
           ordering@: 6
