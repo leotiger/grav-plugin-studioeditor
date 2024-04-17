@@ -78,5 +78,5 @@ I'm looking out for collaborators even owners for this plugin. Feel free to ask 
 - [x] Update underlying code base as many of the libs are quite old 
 - [x] Enhance support of configuration options for the editor instance directly from Admin
 - [x] Implement additional markdown features
-- [x] Implement art of the state markdown parser like Markdown-it
+- [x] Implement state of the art markdown parser like Markdown-it
 
