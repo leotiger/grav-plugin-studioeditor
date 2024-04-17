@@ -1,0 +1,53 @@
+PLUGIN_STUDIOEDITOR:
+  CREDITS: 'À propos'
+  CREDITS_NOTES: 'Assistance et demandes'
+  CREDITS_NOTES_TEXT: 'Vous pouvez m''envoyer un e-mail à [Uli Hake](mailto:uli.hake@gmail.com)'
+  CREDITS_THIRDPARTY: 'Truc de tier'
+  CREDITS_THIRDPARTY_TEXT: "- [StackEdit.io](https://stackedit.io) \n- [Resize Images](https://github.com/fredrikekelund/grav-plugin-resize-images)\n- Plugins liés au markdown et plus d'autres..."
+  DATA_TYPES: 'Types de donées'
+  FRONTMATTER: Frontmatter
+  IMAGE_QUALITY: 'Qualité des images'
+  IMAGE_QUALITY_HINT: 'Qualité d''image pour les images jpeg (.jpg, .jpeg). Veuillez vous préciser quelque chose entre 10 et 100. 100 signifie la meilleure qualité.'
+  ITEMS: Éléments
+  ITEMS_LIST: 'Liste des éléments'
+  ITEM_DETAILS: 'Detailles de l''élément'
+  MARKDOWN_ALIGN: 'Aligner les blocs de Markdown'
+  MARKDOWN_BLOCKALIGN_PROCESS: 'Activer Alignement'
+  MARKDOWN_EXTRAS: 'Extras de Markdown'
+  MARKDOWN_EXTRAS_CSS: 'Utiliser le CSS de Extras'
+  MARKDOWN_NOTICES: 'Avis de Markdown'
+  MARKDOWN_NOTICES_PROCESS: 'Utiliser les avis de Markdown'
+  MATHJAX_BUILTIN_CSS: 'Charger le CSS intégré'
+  MATHJAX_BUILTIN_JS: 'Utiliser la configuration de MathJax'
+  MATHJAX_PROCESS: 'Activer MathJax'
+  MATHJAX_TITLE: MathJax
+  MATHJAX_URL: 'Url de MathJax.js'
+  MATHJAX_URL_HELP: 'Entrez l''URL Mathjax ici ou laissez-la inchangée pour utiliser celle fournie par le plugin'
+  MATHJAX_WEIGHT: 'Priorité d''exécution'
+  MATHJAX_WEIGHT_HELP: 'Pour traiter le contenu de la page juste après *SmartyPants*, utilisez des valeurs négatives.'
+  MEDIA_WIDTH: 'Largeur du média'
+  MEDIA_WIDTH_HINT: 'La largeur maximale du média que vous proposez.'
+  'NO': Non
+  PAGE_AUTHOR: 'Auteur du contenu de la page'
+  PAGE_AUTHOR_HINT: 'Veuillez indiquer le nom de l''auteur'
+  PAGE_DATE: 'Date du publication'
+  PAGE_DATE_HINT: 'Indiquer la date de publication'
+  PAGE_RESIZE_IMAGES: 'Supprimer les variantes de l''image'
+  PAGE_RESIZE_IMAGES_HINT: 'Restaurer l''original et supprimer les variantes de l''image.'
+  PAGE_TITLE: 'Titre de la page'
+  PAGE_TITLE_HINT: 'Si vous veuillez enregistrer le nom de l''auteur...'
+  RESIZE_IMAGES: 'Redimensionneurs d''image'
+  STUDIOEDITOR: StudioEditor
+  STUDIOEDITOR_TAB: StudioEditor
+  TAB_HELP: Assistance
+  TAB_HELP_EDITOR: Editeur
+  TAB_HELP_EDITOR_01_CONTENT: 'Vous pouvez voir ce que proposent les étiquettes. Beaucoup d''entre eux exposant l''aide contextuelle lorsque vous survolez l''icône d''aide avec la souris.'
+  TAB_HELP_EDITOR_01_LABEL: 'Aide contextuelle'
+  TAB_HELP_EDITOR_02_CONTENT: 'Si vous enregistrez et que l''onglet actif n''est pas l''onglet Contenu, l''éditeur risque de ne pas être initialisé correctement après le rechargement. Dans ce cas, enregistrez ou rechargez simplement avec CTRL+R à nouveau avec l''onglet contenu activé.'
+  TAB_HELP_EDITOR_02_LABEL: Problèmes
+  TAB_HELP_EDITOR_03_CONTENT: 'L''éditeur supporte de nombreux raccourcis pratiques. Dans l''éditeur, vous pouvez utiliser les raccourcis standard pour le gras, l''italique, par exemple, le CTRL+b, le CTRL+i. Si le focus est en dehors de l''éditeur, vous devrez utiliser CTRL+SHIFT+SHORTCODE, par exemple, CTRL+MAJ+R. Les combinaisons de shortcodes avec shift fonctionnent également à l’intérieur de l’éditeur.'
+  TAB_HELP_EDITOR_03_LABEL: Raccourcis
+  TAB_HELP_EXTENT: Développer
+  TAB_HELP_EXTENT_01_CONTENT: "Studioeditor comprend deux types de champs de formulaire spéciaux: \n\n- studioeditor \n- studiopagemedia \n\nCes champs de formulaire doivent être utilisés ensemble pour le champ de contenu et de téléchargement de média dans un blueprint. Veuillez noter que vous ne pouvez pas placer plus d'un **studioeditor** dans un instànce de plantille (blueprint). Le plugin Studioeditor remplace la plantille par défaut de GRAV (default.yaml). Si vous manquez un champ de formulaire, vous pouvez signaler un problème sur [Github](https://github.com/leotiger/grav-plugin-studioeditor). Tous vos plantille de thème étendant le blueprint par défaut de StudioEditor (default.yaml aussi) incluent déjà l'éditeur **studioeditor** et le sélecteur de fichiers **studiopagemedia**."
+  TAB_HELP_EXTENT_01_LABEL: 'Développer le Theme blueprints'
+  'YES': Oui
