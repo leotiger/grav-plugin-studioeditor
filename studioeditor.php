@@ -792,7 +792,7 @@ class StudioEditorPlugin extends Plugin
             $this->grav['assets']
                 ->add('plugin://studioeditor/assets/css/markdownextras.css');
         }
-	$this->grav['assets']->add('plugin://studioeditor/css/main.css');        	
+	$this->grav['assets']->add('plugin://studioeditor/assets/res/themes/main.css');        	
       }
     }
     
