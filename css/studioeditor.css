@@ -29,6 +29,10 @@
   color: #BFC6D0 !important;
 }
 
+.wmd-panel .navbar-default a {
+    color: #ddd;
+}
+
 .wmd-panel input[type="number"] {
   background: #fff;
   color: #000;
