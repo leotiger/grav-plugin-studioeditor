@@ -940,13 +940,13 @@ class StudioEditorPlugin extends Plugin
 		
 		
 		if ($this->config->get('plugins.studioeditor.notices_active')) {
-			$markdown->addBlockType('¡', 'Notices', true, false);
+			$markdown->addBlockType('!', 'Notices', true, false);
 
 			$markdown->blockNotices = function($Line) {
 
 				$this->level_classes = ['yellow', 'red', 'blue', 'green'];//$this->config->get('plugins.markdown-notices.level_classes');
 
-				if (preg_match('/^(¡{1,'.count($this->level_classes).'})[ ]+(.*)/u', $Line['text'], $matches))
+				if (preg_match('/^(!{1,'.count($this->level_classes).'})[ ]+(.*)/u', $Line['text'], $matches))
 				{
 					$level = strlen($matches[1]) - 1;
 
@@ -981,7 +981,7 @@ class StudioEditorPlugin extends Plugin
 					return;
 				}
 
-				if ($Line['text'][0] === '!' and preg_match('/^(¡{1,'.count($this->level_classes).'})(.*)/u', $Line['text'], $matches))
+				if ($Line['text'][0] === '!' and preg_match('/^(!{1,'.count($this->level_classes).'})(.*)/u', $Line['text'], $matches))
 				{
 					$Block['element']['text'] []= ltrim($matches[2]);
 
@@ -1077,7 +1077,7 @@ class StudioEditorPlugin extends Plugin
 				
 			//text = text.replace(/^\<(blockquote|p|div|h[1-6]|li)([^\>]*)\>(.*?)[ ]{1,}(\|{1,1})([l|r|c|j]{1,1})[ ]*\<\/(blockquote|p|div|h[1-6]|li)\>/gm,
 
-			$content = preg_replace_callback('/^\<(blockquote|p|div|h[1-6])([^>]*)\>[\n\r]*(¡{1,4})[ ]{1,}(.*?)\<\/(blockquote|p|div|h[1-6])\>/mu', function ($matches) {
+			$content = preg_replace_callback('/^\<(blockquote|p|div|h[1-6])([^>]*)\>[\n\r]*(!{1,4})[ ]{1,}(.*?)\<\/(blockquote|p|div|h[1-6])\>/mu', function ($matches) {
 
 				$level = mb_strlen($matches[3]) - 1;
 				// if we have more levels than we support
