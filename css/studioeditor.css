@@ -26,7 +26,12 @@
   color: #ddd;
 }
 
-.extension-preview-buttons h1, .extension-preview-buttons h2, .extension-preview-buttons h3, .extension-preview-buttons h4, .extension-preview-buttons h5 {
+.extension-preview-buttons h1, 
+.extension-preview-buttons h2, 
+.extension-preview-buttons h3, 
+.extension-preview-buttons h4, 
+.extension-preview-buttons h5, 
+.extension-preview-buttons hr {
   color: #BFC6D0 !important;
 }
 
