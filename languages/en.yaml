@@ -25,26 +25,11 @@ PLUGIN_STUDIOEDITOR:
   FRONTMATTER: 'Frontmatter'
   YES: Yes
   NO: No
-  FONT_SIZE: Font size
   IMAGE_QUALITY: Image quality
   MEDIA_WIDTH: Media width
-  FONT_SIZE_HINT: Font size in em units. Please use . for values like 0.85 or 1.2
   IMAGE_QUALITY_HINT: Image quality for jpeg images (.jpg, .jpeg). Please specify something between 10 and 100. 100 means best quality.
   MEDIA_WIDTH_HINT: The maximum width of the media you offer.
   CREDITS: About
-  CREDIT_LIST: List of credits you want to mention
-  CREDIT_TITLE: Title
-  CREDIT_URL: Reference url
-  CREDIT_IMAGE: A image representation
-  CREDIT_CHUNKS: Descriptive text portions for the credit
-  LINKS: LINKS
-  LINK_LIST: List of related links
-  LINK_TITLE: Title
-  LINK_URL: Link url
-  LINK_IMAGE: A image for the link
-  LINK_CHUNKS: Descriptive text portions for the credit
-  NEWS_SECTION: Home news section
-  STUDIO_SECTION: Home studio section
   RESIZE_IMAGES: Image Resizer
   CREDITS_THIRDPARTY: Third party stuff
   CREDITS_THIRDPARTY_TEXT: "<a href='http://stackedit.io' target='_blank'>StackEdit</a><br /><a href='https://github.com/fredrikekelund/grav-plugin-resize-images' target='_blank'>Resize Images</a><br />Plugins related with markdown and a lot more..."
@@ -55,12 +40,6 @@ PLUGIN_STUDIOEDITOR:
   ITEMS_LIST: Items List
   ITEMS: Items
   ITEM_DETAILS: Item Details
-  PAGE_RESET_CONTENT: Reset content
-  PAGE_RESET_CONTENT_HELP: Reset content for all languages using default language content as source. (This will overwrite content in other languages, use with care)
-  PAGE_RESET_GALLERY: Reset gallery
-  PAGE_RESET_GALLERY_HELP: Reset gallery entries for all languages using default language content as source. (This will overwrite gallery entries in other languages, use with care)
-  PAGE_RESET_COVER: Reset cover
-  PAGE_RESET_COVER_HELP: Reset gallery cover for all languages using default language content as source. (This will overwrite the gallery cover in other languages, use with care)
   TAB_HELP: Help
   TAB_HELP_EDITOR: Editor
   TAB_HELP_EDITOR_01_LABEL: Contextual help
