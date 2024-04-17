@@ -3,6 +3,7 @@
 
 1. [](#bugfix)
     * Remove unnecessary form fields from Page Content tab again that should run in from theme templates.
+    * Fix markdown notices.
 
 1. [](#improved)
     * Reattach help tab content in default.yaml to content defined in language definitions.
