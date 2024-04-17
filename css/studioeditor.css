@@ -23,6 +23,7 @@
 .extension-preview-buttons .dropdown-menu {
   background-color: #1c5180 !important;
   font-weight: bold !important;
+  color: #ddd;
 }
 
 .extension-preview-buttons h1, .extension-preview-buttons h2, .extension-preview-buttons h3, .extension-preview-buttons h4, .extension-preview-buttons h5 {
