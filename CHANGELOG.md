@@ -1,9 +1,12 @@
 # v1.1.9
 ## 04/17/2024
 
+1. [](#bugfix)
+    * Remove unnecessary form fields from Page Content tab again that should run in from theme templates.
+
 1. [](#improved)
-    * Remove form fields from Content tab that should run in from theme templates.
     * Reattach help tab content in default.yaml to content defined in language definitions.
+    * Several language definitions added using [Babel](https://github.com/leotiger/grav-plugin-babel). StudioEditor includes now definitions for English, German, Spanish, Catalan and French.
 
 # v1.1.8
 ## 04/17/2024
