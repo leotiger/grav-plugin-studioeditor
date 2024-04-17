@@ -1,0 +1,53 @@
+PLUGIN_STUDIOEDITOR:
+  CREDITS: 'Quant a'
+  CREDITS_NOTES: 'Soport i peticions'
+  CREDITS_NOTES_TEXT: 'Pot contactar amb mi utilitzant [Uli Hake](mailto:uli.hake@gmail.com)'
+  CREDITS_THIRDPARTY: 'Coses de tercers'
+  CREDITS_THIRDPARTY_TEXT: "- [StackEdit.io](https://stackedit.io) \n- [Resize Images](https://github.com/fredrikekelund/grav-plugin-resize-images)"
+  DATA_TYPES: 'Tipus de dades'
+  FRONTMATTER: Frontmatter
+  IMAGE_QUALITY: 'Qualitat del imatge'
+  IMAGE_QUALITY_HINT: 'Qualitat de imatge tipo jpeg (.jpg,, .jpeg). Si us plau, especificar un valor entre 10 i 100. 100 defineix la qualitat màxima.'
+  ITEMS: Entrades
+  ITEMS_LIST: 'Llista de entrades'
+  ITEM_DETAILS: 'Detalls de la entrada'
+  MARKDOWN_ALIGN: 'Alineació de blocs Markdown'
+  MARKDOWN_BLOCKALIGN_PROCESS: 'Activar suport alineació'
+  MARKDOWN_EXTRAS: 'Markdown Extras'
+  MARKDOWN_EXTRAS_CSS: 'Carregar css de extras'
+  MARKDOWN_NOTICES: 'Apunts de Markdown'
+  MARKDOWN_NOTICES_PROCESS: 'Activar Apunts de Markdown'
+  MATHJAX_BUILTIN_CSS: 'Utilitzar css incorporat'
+  MATHJAX_BUILTIN_JS: 'Utilitzar configuració de MathJax incorporada'
+  MATHJAX_PROCESS: 'Executar MathJax'
+  MATHJAX_TITLE: MathJax
+  MATHJAX_URL: 'Enllaç per a MathJax'
+  MATHJAX_URL_HELP: 'Faciliti l''enllaç per MathJax. Quan no fa canvis, s''utilitzarà la incorporada.'
+  MATHJAX_WEIGHT: 'Ordre d''execució'
+  MATHJAX_WEIGHT_HELP: 'Per executar els continguts directament desprès de "SmartyPants" utilitzi un valor negatiu.'
+  MEDIA_WIDTH: 'Amplada imatges'
+  MEDIA_WIDTH_HINT: 'La amplada màxima de les seves imatges'
+  'NO': 'No'
+  PAGE_AUTHOR: 'Autor de la pàgina'
+  PAGE_AUTHOR_HINT: 'Aquí pot facilitar el nom del autor del contiguts.'
+  PAGE_DATE: 'Data de publicació'
+  PAGE_DATE_HINT: 'Faciliti la data de publicació'
+  PAGE_RESIZE_IMAGES: 'Esborrar variacions dels imatges'
+  PAGE_RESIZE_IMAGES_HINT: 'Esborrar las variacions y restablir la versió original.'
+  PAGE_TITLE: 'Títol de la pàgina'
+  PAGE_TITLE_HINT: 'Aquí pot facilitar el títol per la pàgina.'
+  RESIZE_IMAGES: 'Redimensionador d''imatges'
+  STUDIOEDITOR: StudioEditor
+  STUDIOEDITOR_TAB: StudioEditor
+  TAB_HELP: Ayuda
+  TAB_HELP_EDITOR: Editor
+  TAB_HELP_EDITOR_01_CONTENT: 'Si us plau, mireu el què ofereixen les etiquetes. Molts d''ells amplien l''ajuda contextual quan passeu el cursor per sobre de la icona d''ajuda amb el ratolí.'
+  TAB_HELP_EDITOR_01_LABEL: 'Ayuda contextual'
+  TAB_HELP_EDITOR_02_CONTENT: 'Si deseu i la pestanya activa no és la pestanya de contingut, és possible que l''editor no s''inicialitzi correctament després de tornar a carregar. En aquest cas, simplement deseu o torneu a carregar amb CTRL+R de nou amb la pestanya de contingut activada.'
+  TAB_HELP_EDITOR_02_LABEL: Problemes
+  TAB_HELP_EDITOR_03_CONTENT: 'L''editor admet moltes dreceres útils. Dins de l''editor podeu utilitzar les dreceres estàndard per a negreta, cursiva com ara CTRL+b, CTRL+i. Si el focus està fora de l''editor, haureu d''utilitzar CTRL+MAJÚS+LLETRA com ara CTRL+MAJ+R. Les combinacions de codi curt amb canvi també funcionen dins de l''editor.'
+  TAB_HELP_EDITOR_03_LABEL: Dreceres
+  TAB_HELP_EXTENT: Extendre
+  TAB_HELP_EXTENT_01_CONTENT: "Studioeditor inclou dos tipus de camps de formulari especials:\n\n- studioeditor\n- studiopagemedia\n\nAquests camps de formulari s'han d'utilitzar conjuntament per al camp de càrrega de contingut i de fitxers afegits dins d'una plantilla determinada (blueprint). Tingueu en compte que no podeu col·locar més d'una instància **studioeditor** dins d'una mateixa plantilla. El connector Studioeditor substitueix la plantilla predeterminda de GRAV (default.yaml). Si no trobeu un camp de formulari, plantegeu un problema a [Github](https://github.com/leotiger/grav-plugin-studioeditor). Totes les vostres plantilles d'un tema que amplien la plantilla per defecte de StudioEditor (default.yaml) inclouen ja l'editor **studioeditor** i el selector de fitxers **studiopagemedia**."
+  TAB_HELP_EXTENT_01_LABEL: 'Extendre plantilles de tema'
+  'YES': Sí

@@ -3,7 +3,7 @@ PLUGIN_STUDIOEDITOR:
   CREDITS_NOTES: 'Soporte y sugerencias'
   CREDITS_NOTES_TEXT: 'Puede contactarme por correo a [Uli Hake](mailto:uli.hake@gmail.com)'
   CREDITS_THIRDPARTY: 'Cosas de terceros'
-  CREDITS_THIRDPARTY_TEXT: "- [StackEdit.io](https://stackedit.io)\n- [Resize Images](https://github.com/fredrikekelund/grav-plugin-resize-images)"
+  CREDITS_THIRDPARTY_TEXT: "- [StackEdit.io](https://stackedit.io) \n- [Resize Images](https://github.com/fredrikekelund/grav-plugin-resize-images)"
   DATA_TYPES: 'Tipos de datos'
   FRONTMATTER: Frontmatter
   IMAGE_QUALITY: 'Calidad de imagen'
