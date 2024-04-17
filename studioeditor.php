@@ -11,13 +11,8 @@ use Grav\Common\Page\Page;
 use Grav\Common\Page\Pages;
 use Grav\Common\Plugin;
 use Grav\Common\Uri;
-use Grav\Common\User\User;
-use RocketTheme\Toolbox\File\File;
 use RocketTheme\Toolbox\Event\Event;
-use RocketTheme\Toolbox\Session\Session;
 use Grav\Plugin\Shortcodes\BlockShortcode;
-use Grav\Common\Cache;
-use DiDom\Document;
 
 
 require_once 'adapters/resize_imagick.php';
@@ -102,9 +97,10 @@ class StudioEditorPlugin extends Plugin
                 $uri = $this->grav['uri'];
 
                 $this->enable([
-                    //'onBlueprintCreated' => ['onAdminBlueprintCreated', 0],			
+                    'onBlueprintCreated' => ['onAdminBlueprintCreated', 0],			
                     'onTwigTemplatePaths' => ['onAdminTwigTemplatePaths', 0],
                     'onTwigSiteVariables'        => ['onAdminTwigSiteVariables', 1000],            
+                    //'onGetPageBlueprints' => ['onAdminGetPageBlueprints', 0],
                     'onGetPageTemplates' => ['onAdminGetPageTemplates', 0],
                     'onAdminData' => ['onAdminData', 0],
                     'onAdminSave' => ['onAdminResetImages', 1000],	
@@ -142,12 +138,16 @@ class StudioEditorPlugin extends Plugin
     {
         /** @var Blueprints $blueprint */
         $blueprint = $event['blueprint'];
-
+        //dump("line 146");
+        //dump($blueprint);
+        /*
         if ($blueprint->get('form/fields/tabs')) {
             $blueprints = new Blueprints(__DIR__ . '/blueprints');
             $extends = $blueprints->get($this->name);
             $blueprint->extend($extends, true);
         }
+         * 
+         */
     }
 
 	
@@ -779,22 +779,24 @@ class StudioEditorPlugin extends Plugin
         }
         
         $this->grav['assets']->add('plugin://studioeditor/css/pagedown.css');
+        
         $this->grav['assets']->add('plugin://studioeditor/css/studioeditor.css');
         //$this->grav['assets']->add('plugin://studioeditor/js/Markdown.Converter.js');
         //$this->grav['assets']->add('plugin://studioeditor/js/Markdown.Sanitizer.js');
         //$this->grav['assets']->add('plugin://studioeditor/js/Markdown.Editor.js');
         $this->grav['assets']->add('plugin://studioeditor/js/tooltip.js');
         $this->grav['assets']->add('plugin://studioeditor/js/studioeditor.js');
+        
 		//$this->grav['assets']->add('https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML');
         if ($this->config->get('plugins.studioeditor.extras_built_in_css')) {
             $this->grav['assets']
                 ->add('plugin://studioeditor/assets/css/markdownextras.css');
         }
-		
+	$this->grav['assets']->add('plugin://studioeditor/css/main.css');        	
       }
     }
     
-    public function onAdminGetPageTemplates($event)
+    public function onAdminGetPageBlueprints($event)
     {
         $types = $event->types;
         //$locator = Grav::instance()['locator'];
@@ -802,11 +804,26 @@ class StudioEditorPlugin extends Plugin
         
         $locator = $this->grav['locator'];
         $scanb = $locator->findResource('plugin:///studioeditor/blueprints', true);
-        $scant = $locator->findResource('plugin:///studioeditor/admin/templates', true);
-        if (!is_string($scanb) || !is_string($scant)) {
+        if (!is_string($scanb)) {
             throw new \InvalidArgumentException('Scan uris invalid');
         }
-            
+        //dump($types);
+        //$types->init();      
+        $types->scanBlueprints($scanb);      
+        dump($types);
+    }
+    
+    public function onAdminGetPageTemplates($event)
+    {
+        $types = $event->types;
+        $uri = $this->grav['uri'];
+        
+        $locator = $this->grav['locator'];
+        $scanb = $locator->findResource('plugin:///studioeditor/blueprints', true);
+        $scant = $locator->findResource('plugin:///studioeditor/admin/templates', true);
+        if (!is_string($scant) || !is_string($scant)) {
+            throw new \InvalidArgumentException('Scan uris invalid');
+        }
         $types->scanBlueprints($scanb);      
         $types->scanTemplates($scant);
     }

@@ -1,31 +1,14 @@
 <?php
 namespace Grav\Plugin;
 
-use DateTime;
 use Grav\Common\Data;
 use Grav\Common\File\CompiledYamlFile;
-use Grav\Common\GPM\GPM;
-use Grav\Common\GPM\Licenses;
-use Grav\Common\GPM\Response;
 use Grav\Common\Grav;
-use Grav\Common\Language\LanguageCodes;
-use Grav\Common\Page\Page;
-use Grav\Common\Page\Pages;
 use Grav\Common\Plugins;
 use Grav\Common\Themes;
-use Grav\Common\Uri;
 use Grav\Common\User\User;
-use Grav\Common\Utils;
 use RocketTheme\Toolbox\Event\Event;
-use RocketTheme\Toolbox\File\File;
-use RocketTheme\Toolbox\File\JsonFile;
-use RocketTheme\Toolbox\ResourceLocator\UniformResourceIterator;
 use RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator;
-use RocketTheme\Toolbox\Session\Message;
-use RocketTheme\Toolbox\Session\Session;
-use Symfony\Component\Yaml\Yaml;
-use Composer\Semver\Semver;
-use PicoFeed\Reader\Reader;
 
 class StudioEditor
 {
