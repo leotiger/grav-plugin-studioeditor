@@ -1,3 +1,10 @@
+# v1.1.9
+## 04/17/2024
+
+1. [](#improved)
+    * Remove form fields from Content tab that should run in from theme templates.
+    * Reattach help tab content in default.yaml to content defined in language definitions.
+
 # v1.1.8
 ## 04/17/2024
 
