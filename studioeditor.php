@@ -1036,17 +1036,19 @@ class StudioEditorPlugin extends Plugin {
     }
 
     protected function imageWebp($content) {
-        if (!is_string($content) || trim($content) === '') {
-            return;
-        }
-        preg_match_all('~(?<="|\'|\s|\()(?:/user/pages)/(?:[a-zA-Z0-9\@\-_\/\.]+)\.(?:jpe?g|png)(?>=\'|"|\s|\))~i', $content, $matches);
-        foreach ($matches[0] as $match) {
-            $trimmed = trim($match, '" )');
-            //print_r($trimmed . '\r');            
-            $webp = preg_replace('~\.(?:jpe?g|png)~', '.webp', $trimmed);
-            if (file_exists(ROOT_DIR . $trimmed) && file_exists(ROOT_DIR . "/user/webp" . $webp)) {
+        if ($this->config->get('plugins.webp.enabled')) {
+            if (!is_string($content) || trim($content) === '') {
+                return;
+            }
+            preg_match_all('~(?<="|\'|\s|\()(?:/user/pages)/(?:[a-zA-Z0-9\@\-_\/\.]+)\.(?:jpe?g|png)(?>=\'|"|\s|\))~i', $content, $matches);
+            foreach ($matches[0] as $match) {
+                $trimmed = trim($match, '" )');
+                //print_r($trimmed . '\r');            
+                $webp = preg_replace('~\.(?:jpe?g|png)~', '.webp', $trimmed);
+                if (file_exists(ROOT_DIR . $trimmed) && file_exists(ROOT_DIR . "/user/webp" . $webp)) {
 
-                $content = str_replace($trimmed, "/user/webp" . $webp, $content);
+                    $content = str_replace($trimmed, "/user/webp" . $webp, $content);
+                }
             }
         }
         return $content;
