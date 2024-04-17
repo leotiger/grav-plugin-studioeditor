@@ -18,58 +18,13 @@ PLUGIN_STUDIOEDITOR:
   PAGE_TITLE_HINT: 'Please provide a title for your page'  
   PAGE_AUTHOR: 'Page Author'
   PAGE_AUTHOR_HINT: "Please provide the author's name"
-  PAGE_SLIDER: 'View media in slider'
-  PAGE_SLIDER_HINT: "Show media in slider if studio template for this page supports slider"  
-  PAGE_SLIDER_FORCE: 'Show slider in single view'
-  PAGE_SLIDER_FORCE_HINT: "Show slider without overlay"  
-  PAGE_BGCOLOR: 'Page background color'
-  PAGE_BGCOLOR_HINT: "Set the background color for your page"    
-  PAGE_FONTCOLOR: 'Page font color'
-  PAGE_FONTCOLOR_HINT: "Set the main font color for your page"      
   PAGE_DATE: 'Publication date'
   PAGE_DATE_HINT: "Set the publication date"      
-  PAGE_SHARING: 'Allow sharing'
-  PAGE_SHARING_HINT: 'Add sharing icons to the page'
-  PAGE_COMMENTS: 'Allow comments'
-  PAGE_COMMENTS_HINT: 'Allow visitor comments'
   PAGE_RESIZE_IMAGES: 'Clear image variations'
   PAGE_RESIZE_IMAGES_HINT: 'Restore orginal images and clear variations'
   FRONTMATTER: 'Frontmatter'
-  GALLERY: 'Gallery'
-  PAGE_GALLERYFILTER: 'Gallery filters'
-  PAGE_GALLERYFILTER_HINT: 'Define filters for gallery overviews'
-  GALLERY_TITLE: 'Media Title'
-  GALLERY_UPLOAD: Upload page and gallery media
-  GALLERY_SUMMARY: 'Media Summary'
-  GALLERY_MEDIA: 'Media item'
-  GALLERY_ALT: 'Media alt text'
-  GALLERY_MEDIAURL: Media link (youtube, vimeo)
-  GALLERY_MEDIAURL_HELP: If you specify an external media it will take precedence over internal media items
-  GALLERY_CHUNKS: Description
-  GALLERY_CHUNK: Line
-  GALLERY_TEXTNODE: Text node
-  PAGE_BGVIDEO: Background video
-  PAGE_BGIMAGE: Background image
-  PAGE_BGVIDEO_HINT: "Background video has to be local. You have to prepare three versions: a mp4, a webm and a ogv version"
-  PAGE_BGIMAGE_HINT: You may select a background image for your page
   YES: Yes
   NO: No
-  COVER_TITLE: Cover title
-  COVER_IMAGE: Cover image
-  COVER_ALT: Cover alt
-  COVER_SUMMARY: Cover description
-  COVER_TITLE_HINT: The title for your cover image. The template may display this title
-  COVER_IMAGE_HINT: Cover image
-  COVER_ALT_HINT: The alternative text to show if image display is not available or when a user hovers over the image
-  COVER_SUMMARY_HINT: A description for you cover media. The template may show this information
-  COVER_TREATMENT: Cover Filter
-  COVER_TREATMENT_HINT: Apply filter to cover image
-  COVER_TREATMENT_NONE: No treatment
-  COVER_TREATMENT_NEGATIVE: Negative
-  COVER_TREATMENT_SEPIA: Sepia
-  COVER_TREATMENT_EMBOSS: Emboss
-  COVER_TREATMENT_EDGE: Edge
-  COVER_TREATMENT_GRAYSCALE: Grayscale
   FONT_SIZE: Font size
   IMAGE_QUALITY: Image quality
   MEDIA_WIDTH: Media width
@@ -90,33 +45,11 @@ PLUGIN_STUDIOEDITOR:
   LINK_CHUNKS: Descriptive text portions for the credit
   NEWS_SECTION: Home news section
   STUDIO_SECTION: Home studio section
-  TESTIMONIALS_SECTION: Home testimonials section  
-  TESTIMONIALS: Testimonials
-  TESTIMONIALS_LIST: A list of quotes for your homepage
-  TESTIMONIAL_TITLE: The quote reference
-  TESTIMONIAL_QUOTE: The quote made
-  CAPTCHA_NOT_VALID: Captcha not valid!
-  OPACITY: Opacity (Shine through)
-  OPACITY_HINT: Please specify a value between 0 and 1, e.g. 0.75 or 0 or 0.9. Please use dot (.) as decimal separator. 0 = completely transparent, 1 = opaque.
   RESIZE_IMAGES: Image Resizer
   CREDITS_THIRDPARTY: Third party stuff
   CREDITS_THIRDPARTY_TEXT: "<a href='http://stackedit.io' target='_blank'>StackEdit</a><br /><a href='https://github.com/fredrikekelund/grav-plugin-resize-images' target='_blank'>Resize Images</a><br />Plugins related with markdown and a lot more..."
   CREDITS_NOTES: Support and requests
   CREDITS_NOTES_TEXT: "You can email me at <a href='mailto:uli.hake@gmail.com'>Uli Hake</a>"
-  SLIDER: Slider
-  SLIDER_LIST: Slider entries
-  SLIDER_TITLE: Title
-  SLIDER_CONTENT: Content
-  SLIDER_LINK: Link
-  SLIDER_IMAGE: Image
-  SLIDER_VIDEO: Video url
-  SLIDER_FONTCOLOR: 'Slide font color'
-  SLIDER_FONTCOLOR_HINT: "Set the main font color for your slide"      
-  PAGE_FULLWIDTH: Page full width
-  MUSINGS_ROUTE: Route to musings
-  EXPOSITION_ROUTE: Route to exposition
-  MUSINGS_ROUTE_HELP: Set the route to musings overview
-  EXPOSITION_ROUTE_HELP: Set the route to expositions overview
   STUDIOEDITOR: Studio Editor
   DATA_TYPES: Data Types
   ITEMS_LIST: Items List
