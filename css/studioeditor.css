@@ -20,18 +20,18 @@
     z-index: 9999 !important;
 }
 
-.extension-preview-buttons .dropdown-menu {
+.extension-preview-buttons .dropdown-menu, .extension-preview-buttons div.dropdown-menu {
   background-color: #1c5180 !important;
   font-weight: bold !important;
-  color: #ddd;
+  color: #dddddd !important;
 }
 
-.extension-preview-buttons h1, 
-.extension-preview-buttons h2, 
-.extension-preview-buttons h3, 
-.extension-preview-buttons h4, 
-.extension-preview-buttons h5, 
-.extension-preview-buttons hr {
+.extension-preview-buttons  .dropdown-menu h1, 
+.extension-preview-buttons  .dropdown-menu h2, 
+.extension-preview-buttons  .dropdown-menu h3, 
+.extension-preview-buttons  .dropdown-menu h4, 
+.extension-preview-buttons  .dropdown-menu h5, 
+.extension-preview-buttons  .dropdown-menu hr {
   color: #BFC6D0 !important;
 }
 
