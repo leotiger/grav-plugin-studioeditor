@@ -28,11 +28,20 @@
 
 .extension-preview-buttons  .dropdown-menu h1, 
 .extension-preview-buttons  .dropdown-menu h2, 
-.extension-preview-buttons  .dropdown-menu h3, 
+.extension-preview-buttons  .dropdown-menu h3 {    
+  color: #BFC6D0 !important;
+  border-bottom: 3px solid #BFC6D0 !important;  
+}
+
 .extension-preview-buttons  .dropdown-menu h4, 
-.extension-preview-buttons  .dropdown-menu h5, 
+.extension-preview-buttons  .dropdown-menu h5 {    
+  color: #BFC6D0 !important;
+}
+
+
 .extension-preview-buttons  .dropdown-menu hr {
   color: #BFC6D0 !important;
+  border-bottom: 2px solid #BFC6D0 !important;    
 }
 
 .wmd-panel .navbar-default a {
