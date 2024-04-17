@@ -50,52 +50,22 @@ form:
             header.media_order:
                 unset@: true
 
-            header.related_pages:
-              type: pages
-              size: large
-              classes: fancy
-              label: Select related pages
-              show_all: true
-              show_modular: false
-              show_root: false
-              help: Related pages
-              multiple: true
+            header.resizeall:
+              replace@: true
+              type: studiodefaulttoggle
+              name: resizeall
+              label: PLUGIN_STUDIOEDITOR.PAGE_RESIZE_IMAGES
+              help: PLUGIN_STUDIOEDITOR.PAGE_RESIZE_IMAGES_HINT
+              highlight: 0
+              default: 0
               validate:
-                type: array
-
-            columns:
-              type: columns
-
-              fields:
-                column1:
-                  type: column
-                  fields:
-
-                    header.author:
-                      type: text
-                      style: vertical
-                      label: PLUGIN_ADMIN.AUTHOR
-
-
-                column2:
-                  type: column
-                  fields:
-                    header.resizeall:
-                      replace@: true
-                      type: studiodefaulttoggle
-                      name: resizeall
-                      label: PLUGIN_STUDIOEDITOR.PAGE_RESIZE_IMAGES
-                      help: PLUGIN_STUDIOEDITOR.PAGE_RESIZE_IMAGES_HINT
-                      highlight: 0
-                      default: 0
-                      validate:
-                        type: bool
-                      options:
-                        1: PLUGIN_STUDIOEDITOR.YES
-                        0: PLUGIN_STUDIOEDITOR.NO
-
+                type: bool
+              options:
+                1: PLUGIN_STUDIOEDITOR.YES
+                0: PLUGIN_STUDIOEDITOR.NO
 
         advanced:
+          ordering@: 5
           type: tab
           title: PLUGIN_ADMIN.ADVANCED
 
@@ -440,29 +410,29 @@ form:
 
         help:
           type: tab
-          ordering@: 5
+          ordering@: 6
           title: Help
           fields:
             helpone:
               type: display
               size: large
-              label: TAB_HELP_EDITOR_01_LABEL
+              label: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_01_LABEL
               markdown: true
-              content: TAB_HELP_EDITOR_01_CONTENT
+              content: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_01_CONTENT
             helptwo:
               type: display
               size: large
-              label: TAB_HELP_EDITOR_02_LABEL
+              label: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_02_LABEL
               markdown: true
-              content: TAB_HELP_EDITOR_02_CONTENT
+              content: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_02_CONTENT
             helpthree:
               type: display
               size: large
-              label: TAB_HELP_EDITOR_03_LABEL
+              label: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_03_LABEL
               markdown: true
-              content: TAB_HELP_EDITOR_03_CONTENT
+              content: PLUGIN_STUDIOEDITOR.TAB_HELP_EDITOR_03_CONTENT
 
-        avanced:
-          ordering@: 6
+        security:
+          ordering@: 7
 
 
