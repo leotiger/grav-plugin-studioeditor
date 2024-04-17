@@ -1,0 +1,53 @@
+PLUGIN_STUDIOEDITOR:
+  CREDITS: 'Über StudioEditor'
+  CREDITS_NOTES: 'Unterstützung und Anfragen'
+  CREDITS_NOTES_TEXT: 'Sie können mich über [Uli Hake](mailto:uli.hake@gmail.com) erreichen.'
+  CREDITS_THIRDPARTY: 'Dinge von Dritten'
+  CREDITS_THIRDPARTY_TEXT: "- [StackEdit.io](https://stackedit.io) \n- [Resize Images](https://github.com/fredrikekelund/grav-plugin-resize-images)\n- Weitere mit Markdown verbundene plugins und vieles mehr..."
+  DATA_TYPES: Datentypen
+  FRONTMATTER: Frontmatter
+  IMAGE_QUALITY: Bildqualität
+  IMAGE_QUALITY_HINT: 'Bildqualität für JPEG-Bilder (.jpg, .jpeg). Bitte geben Sie einen Wert zwischen 10 und 100 an. 100 bedeutet beste Qualität.'
+  ITEMS: Einträge
+  ITEMS_LIST: Eintragsliste
+  ITEM_DETAILS: Eintragsdetaills
+  MARKDOWN_ALIGN: Markdown-Block-Ausrichtung
+  MARKDOWN_BLOCKALIGN_PROCESS: 'Ausrichtung unterstützen'
+  MARKDOWN_EXTRAS: Markdown-Extras
+  MARKDOWN_EXTRAS_CSS: 'Extra-Stile laden'
+  MARKDOWN_NOTICES: Markdown-Hinweise
+  MARKDOWN_NOTICES_PROCESS: 'Hinweise unterstützen'
+  MATHJAX_BUILTIN_CSS: 'Mitgelieferte CSS benutzen'
+  MATHJAX_BUILTIN_JS: 'Interne MathJax-Konfiguration laden'
+  MATHJAX_PROCESS: 'MathJax-Unterstützung aktivieren'
+  MATHJAX_TITLE: MathJax
+  MATHJAX_URL: 'MathJax.js URL'
+  MATHJAX_URL_HELP: 'Geben Sie hier die Mathjax-URL ein oder lassen Sie sie unverändert, um die vom Plugin bereitgestellte zu verwenden.'
+  MATHJAX_WEIGHT: Prozesspriorität
+  MATHJAX_WEIGHT_HELP: 'Um den Seiteninhalt direkt nach *SmartyPants* zu verarbeiten, verwenden Sie negative Werte.'
+  MEDIA_WIDTH: Bildweite
+  MEDIA_WIDTH_HINT: 'Die maximale Weite Ihrer Bilder festlegen.'
+  'NO': Nein
+  PAGE_AUTHOR: 'Autor des Seiteninhalts'
+  PAGE_AUTHOR_HINT: 'Hier legen Sie den Autor der Seiteninhalte fest.'
+  PAGE_DATE: Publikationsdatum
+  PAGE_DATE_HINT: 'Publikationsdatum festlegen'
+  PAGE_RESIZE_IMAGES: 'Bildvariationen zurücksetzen'
+  PAGE_RESIZE_IMAGES_HINT: 'Bildoriginal wiederherstellen und Bildvariationen zurücksetzen.'
+  PAGE_TITLE: Seitentitel
+  PAGE_TITLE_HINT: 'Geben Sie bitte hier den Titel Ihrer Seite an.'
+  RESIZE_IMAGES: Bildgrößenanpassung
+  STUDIOEDITOR: StudioEditor
+  STUDIOEDITOR_TAB: StudioEditor
+  TAB_HELP: Hilfe
+  TAB_HELP_EDITOR: Editor
+  TAB_HELP_EDITOR_01_CONTENT: 'Bitte schauen Sie sich an, was die Etiketten bieten. Viele von ihnen erweitern die kontextbezogene Hilfe, wenn Sie den Mauszeiger über dem Hilfesymbol plazieren.'
+  TAB_HELP_EDITOR_01_LABEL: 'Kontextbezogene Hilfe'
+  TAB_HELP_EDITOR_02_CONTENT: 'Wenn Sie speichern und der aktive Reiter nicht der Inhaltsreiter ist, wird StudioEditor nach dem Neuladen möglicherweise nicht korrekt initialisiert. In diesem Fall einfach mit aktiviertem Inhalts-Tab (Reiter) erneut mit STRG+R neu laden oder alternativ speichern.'
+  TAB_HELP_EDITOR_02_LABEL: Probleme
+  TAB_HELP_EDITOR_03_CONTENT: 'Der Editor unterstützt viele praktische Tastenkombinationen. Im Editor können Sie die Standardkürzel für Fett und Kursiv verwenden, z. B. STRG+b, STRG+i. Wenn der Fokus außerhalb des Editors liegt, müssen Sie STRG+UMSCHALT+KURZCODE verwenden, z. B. STRG+UMSCHALT+R. Die Shortcode-Kombinationen mit Umschalttaste funktionieren auch innerhalb des Editors.'
+  TAB_HELP_EDITOR_03_LABEL: Tastenkombinationen
+  TAB_HELP_EXTENT: Erweitern
+  TAB_HELP_EXTENT_01_CONTENT: "Studioeditor umfasst zwei spezielle Formularfeldtypen: \n\n- studioeditor \n- studiopagemedia \n\nDiese Formularfelder müssen zusammen für das Inhalts- und Medien-Upload-Feld eines bestimmten Blueprints verwendet werden. Bitte beachten Sie, dass Sie nicht mehr als eine **studioeditor**-Instanz in Ihrem Blueprint platzieren können. Das Studioeditor-Plugin ersetzt den Standard-Blueprint von GRAV (defaul.yaml). Wenn Sie ein Formularfeld vermissen, melden Sie bitte das Problem auf [Github](https://github.com/leotiger/grav-plugin-studioeditor). Alle Ihre Theme-Blueprints, die den Standard-Blueprint von StudioEditor (default) erweitern, enthalten bereits eine **studioeditor**-Editor-Instanz und die **studiopagemedia**-Dateiauswahl."
+  TAB_HELP_EXTENT_01_LABEL: 'Blueprint ihres Themas erweitern'
+  'YES': Ja
