@@ -781,12 +781,12 @@ class StudioEditorPlugin extends Plugin {
         $uri = $this->grav['uri'];
 
         $locator = $this->grav['locator'];
-        $scanb = $locator->findResource('plugin:///studioeditor/blueprints', true);
+        //$scanb = $locator->findResource('plugin:///studioeditor/blueprints', true);
         $scant = $locator->findResource('plugin:///studioeditor/admin/templates', true);
-        if (!is_string($scant) || !is_string($scant)) {
+        if (!is_string($scant)) {
             throw new \InvalidArgumentException('Scan uris invalid');
         }
-        $types->scanBlueprints($scanb);
+        //$types->scanBlueprints($scanb);
         $types->scanTemplates($scant);
     }
 
