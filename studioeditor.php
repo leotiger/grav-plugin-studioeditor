@@ -1010,6 +1010,7 @@ class StudioEditorPlugin extends Plugin {
 
                 return "<" . $matches[1] . $matches[2] . ">" . $matches[3] . "</" . $matches[6] . ">";
             }, $content);
+            
             $page->setRawContent($content);
         }
         if ($this->config->get('plugins.studioeditor.notices_active')) {
