@@ -60,7 +60,8 @@
 }
 
 /* solve blockquote color problem with admin dark templates */
-.preview-panel .preview-container blockquote {
-  border-left: 10px solid #181b20;
-  background: #ccc;
+.preview-panel .preview-container blockquote,
+.extension-preview-buttons .dropdown-menu blockquote {
+  border-left: 10px solid #aaa;
+  background: #999;
 }

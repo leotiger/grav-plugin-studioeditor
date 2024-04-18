@@ -1,3 +1,12 @@
+# v1.2.0
+## 04/18/2024
+
+1. [](#bugfix)
+    * Include css fix that works with Admin dark themes for blockquote
+
+1. [](#improved)
+
+
 # v1.1.9
 ## 04/17/2024
 
