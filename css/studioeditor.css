@@ -58,3 +58,9 @@
     position: relative;
     right: 35px;    
 }
+
+/* solve blockquote color problem with admin dark templates */
+.preview-panel .preview-container blockquote {
+  border-left: 10px solid #181b20;
+  background: #ccc;
+}
