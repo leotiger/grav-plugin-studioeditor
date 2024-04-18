@@ -11,8 +11,9 @@ define([
             var alignClasses = {l: 'text-left', r: 'text-right', c: 'text-center', j: 'text-justify'};
             //text = text.replace(/^\<(blockquote|p|div|h[1-6]|li|th|td|dt|dd)([^\>]*)\>(.*?)[ ]{1,}(;{1,1})([l|r|c|j]{1,1})[\n\t ]*\<\/(blockquote|p|div|h[1-6]|li|th|td|dt|dd)\>/gm,
             
-            text = text.replace(/^[\t ]*\<(blockqoute|p|div|h[1-6]|li|th|td|dt|dd)([^\>]*)\>[\n]*(.*?)[ ]{1,}(;{1,1})([l|r|c|j]{1,1})[\n\t\r ]*\<\/(blockquote|p|div|h[1-6]|li|th|td|dt|dd)\>/gm,
+            text = text.replace(/^[\t ]*\<(blockqoute|p|div|h[1-6]|li|th|td|dt|dd)([^\>]*)\>[\n]*(.*?)[ ]{1,}(;{1,1})([l|r|c|j]{1,1})[\n\t ]*\<\/(blockquote|p|div|h[1-6]|li|th|td|dt|dd)\>/gm,
                     function (wholeMatch, m1, m2, m3, m4, m5, m6) {
+                        console.log(wholeMatch);
                         var align_class = alignClasses[m5];
                         if (m2.length > 1) {
                             if (m2.indexOf("class=") == -1) {
