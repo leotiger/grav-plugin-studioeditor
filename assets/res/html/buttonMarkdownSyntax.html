@@ -176,7 +176,15 @@ right aligned because we terminate the text block with ;r
 </p>
 <p>You can apply alignment to paragraphs, headers, blockquote</p>
 
-
+<hr />
+<p>
+Be aware, not every formatting option markdown offers works in all contexts. Sometimes you simply need to add an extraline to make things
+working as expected, an extra line converts things into a block and blocks can hold editing features which lines aren't allowed to have.
+</p>
+<p>
+I'll give you an example, if you want follow-up blockquotes to align to the right, you have to insert an empty blockquote line or even an empty line in between of the blockquote structrue.
+This is true for notices as well. This said, you can align individual table cells as well with the align feature of StudioEditor, or even headers, something that's not available in the most common markdown implementations.
+</p>
 <blockquote>What's <a target="_blank" href="https://learn.getgrav.org/17/content/markdown">Markdown Syntax</a> all about?, by the authors of GRAV.</blockquote>
 <blockquote>Read more on <a target="_blank" href="https://michelf.ca/projects/php-markdown/extra/">Markdown extra</a>, a guide by Michel Fortin.</blockquote>
 <blockquote>Based on the <a target="_blank" href="https://github.com/fletcher/MultiMarkdown/blob/master/Documentation/Markdown%20Syntax.md">Markdown syntax guide</a>, by Fletcher T. Penney.</blockquote>

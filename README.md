@@ -7,7 +7,7 @@ them](https://github.com/leotiger/grav-plugin-studioeditor/issues).**
 ![Screenshot](Screenshot.png)
 
 The **Studio Editor Plugin** for [Grav](http://github.com/getgrav/grav) provides an advanced markdown editor with 
-Live preview and support for extended markdown features like alignment, notices, etc. 
+live preview and support for extended markdown features like alignment, notices, etc. 
 StudioEditor makes Markdown more accessible and transparent closing the gap to WYSIWYG editors as the writer
 disposes of a preview which shows how his or her markdown translates and visualizes from text into and as html. 
 The plugin allows to activate some nice extra features, e.g. if you use webp plugin the plugin will automatically
