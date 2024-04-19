@@ -68,7 +68,7 @@ As Studioeditor requires the Admin plugin you should use Admin to maintain the c
 > Carlos Mújica, an artist from Colombia for his artwork and my gratitude for offering me some of his works. As a gift in return I offered him a website and thought: let's do it with GRAV. Without him Studioeditor wouldn't have been released to the wild... Probably I wouldn't have thought of GRAV if I'd been aware of the trouble of updating old shit...
 
 > [GRAV](https://getgrav.org)
-> This plugin wouldn't exist without the great work behind, GRAV
+> This plugin wouldn't exist without the great work behind, thanks a lot.
 
 > [StackEdit](https://github.com/benweet/stackedit)
 > This plugin wouldn't exist also without StackEdit, the current version (v5.x) of StackEdit uses Markdown-it, but the version used within StudioEditor is based on v4.x versions. Future versions of StudioEdit will use Markdown-it as well.
