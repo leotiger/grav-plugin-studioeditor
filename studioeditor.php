@@ -1,5 +1,4 @@
 <?php
-
 namespace Grav\Plugin;
 
 use Grav\Common\File\CompiledYamlFile;
@@ -762,7 +761,6 @@ class StudioEditorPlugin extends Plugin {
 
     public function onAdminGetPageBlueprints($event) {
         $types = $event->types;
-        //$locator = Grav::instance()['locator'];
         $uri = $this->grav['uri'];
 
         $locator = $this->grav['locator'];
@@ -770,8 +768,6 @@ class StudioEditorPlugin extends Plugin {
         if (!is_string($scanb)) {
             throw new \InvalidArgumentException('Scan uris invalid');
         }
-        //dump($types);
-        //$types->init();      
         $types->scanBlueprints($scanb);
         dump($types);
     }
@@ -781,12 +777,10 @@ class StudioEditorPlugin extends Plugin {
         $uri = $this->grav['uri'];
 
         $locator = $this->grav['locator'];
-        //$scanb = $locator->findResource('plugin:///studioeditor/blueprints', true);
         $scant = $locator->findResource('plugin:///studioeditor/admin/templates', true);
         if (!is_string($scant)) {
             throw new \InvalidArgumentException('Scan uris invalid');
         }
-        //$types->scanBlueprints($scanb);
         $types->scanTemplates($scant);
     }
 
