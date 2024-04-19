@@ -6,9 +6,20 @@ them](https://github.com/leotiger/grav-plugin-studioeditor/issues).**
 
 ![Screenshot](Screenshot.png)
 
-The **Studio Editor Plugin** for [Grav](http://github.com/getgrav/grav) provides an advanced markdown editor with Live preview and support for extended markdown features like alignment, notices, etc. StudioEditor makes Markdown more accessible and transparent closing the gap to WYSIWYG editors as the writer disposes of a preview which shows how his or her markdown translates and visualizes from text into and as html. The plugin allows to activate some nice extra features, e.g. if you use webp plugin the plugin will automatically replace calls to jpg and png files to the corresponding webp version if they exist without using redirection, another great feature is the possibility to drag'n'drop images from the upload area right into the editor instance like within the standard editor.
+The **Studio Editor Plugin** for [Grav](http://github.com/getgrav/grav) provides an advanced markdown editor with 
+Live preview and support for extended markdown features like alignment, notices, etc. 
+StudioEditor makes Markdown more accessible and transparent closing the gap to WYSIWYG editors as the writer
+disposes of a preview which shows how his or her markdown translates and visualizes from text into and as html. 
+The plugin allows to activate some nice extra features, e.g. if you use webp plugin the plugin will automatically
+replace calls to jpg and png files to the corresponding webp version if they exist without using redirection, 
+another great feature is the possibility to drag'n'drop images from the upload area right into the editor instance
+like within the standard editor.
 
-Please be advised that some of the features, like MathJax haven't been retested for this public release. This may apply to other features as well. What's definitely working out of the box is what you expect to work: editing standard and enhanced markdown. Or why not editing the summary if it uses the default separator (===) directly within the editor without activating expert mode?
+> :pushpin: Studio Editor is completely unobtrusive which means that you can return to use the build-in editor options at any time.
+
+Please be advised that some of the features, like MathJax haven't been retested for this public release. 
+This may apply to other features as well. What's definitely working out of the box is what you expect to work: 
+editing standard and enhanced markdown. Or why not editing the summary if it uses the default separator (===) directly within the editor without activating expert mode?
 
 ## Installation
 

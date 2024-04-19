@@ -2,10 +2,11 @@
 ## 04/18/2024
 
 1. [](#bugfix)
+    * Fix blueprint inheritance correctly and update default.yaml accordingly
     * Include css fix that works with Admin dark themes for blockquote
 
 1. [](#improved)
-
+    * Information about plugin.
 
 # v1.1.9
 ## 04/17/2024
