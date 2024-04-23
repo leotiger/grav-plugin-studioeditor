@@ -73,6 +73,7 @@ define([
 		eventListenerListMap[eventName] = getExtensionListenerList(eventName);
 		return function() {
 			logger.log(eventName, arguments);
+                        
 			var eventArguments = arguments;
 			_.each(eventListenerListMap[eventName], function(listener) {
 				// Use try/catch in case userCustom listener contains error
@@ -80,7 +81,7 @@ define([
 					listener.apply(null, eventArguments);
 				}
 				catch(e) {
-					console.error(_.isObject(e) ? e.stack : e);
+                                        console.error(_.isObject(e) ? e.stack : e);
 				}
 			});
 		};

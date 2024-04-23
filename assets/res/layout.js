@@ -271,17 +271,11 @@ define([
     }
 
     function resizeAll() {
-        /*
-         windowSize = {
-         width:  window.innerWidth,
-         height: window.innerHeight
-         };
-         */
         var wmdPanelWidth = $('#wmd-panel').innerWidth();
-        var editorHeight = window.innerHeight - $('.studio-media-field').innerHeight() - 60;
+        var editorHeight = window.innerHeight - ($('.studio-media-field').length ? $('.studio-media-field').innerHeight() : 0) - 60;
 
         if (!$('.studio-markdown-editor').hasClass('studio-editor-fullscreen')) {
-            editorHeight = ($('.content-wrapper').innerHeight() / 2) - $('.studio-media-field').innerHeight() - 60;
+            editorHeight = ($('.content-wrapper').innerHeight() / 2) - ($('.studio-media-field').length ? $('.studio-media-field').innerHeight() : 0) - 60;
             if (editorHeight < 480) {
                 editorHeight = 480;
             }
@@ -290,7 +284,6 @@ define([
             width: wmdPanelWidth,
             height: editorHeight
         };
-
         while (true) {
             // Layout wrapper level 1
             wrapperL1.y = navbar.isOpen ? 0 : -navbarHeight;

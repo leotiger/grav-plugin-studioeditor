@@ -2,7 +2,8 @@
     {% set codemirrorOptions = {'spellcheck': 'true', 'mode': 'gfm', 'ignore': ['code', 'preview']}|merge(field.codemirror|default({})) %}
 {% endif %}
 
-{% set value = (value is null ? field.default : value) %}
+{%  set value = (value is null ? (field.default is null ? "" : field.default) : value) %}
+
 {% block label %}
     {% if field.label %}
         {% set hint = field.help ? 'data-hint="' ~ field.help|tu|raw ~ '"': '' %}
@@ -12,8 +13,8 @@
 
 {% block field %}
     {% if field.name == 'content' %}
-
-        <div class="form-data grav-editor studio-markdown-editor">
+        
+        <div class="form-data grav-editor studio-markdown-editor">            
             <div id="editorContainer" class="form-field {{ field.classes|default('') }}">
                 <div id="wmd-panel" class="wmd-panel grav-editor-content is-active">
                     <div class="layout-wrapper-l1">
@@ -85,7 +86,7 @@
                                     name="{{ (scope ~ field.name)|fieldName }}"
                                     id="wmd-input-store"
                                     {% if field.classes is defined %}class="{{ field.classes }} hide" {% endif %}
-                                    {% if not field.classes is defined %}class="{{ field.classes }} hide" {% endif %}
+                                    {% if not field.classes is defined %}class="hide" {% endif %}
                                     {% if field.style is defined %}style="{{ field.style|e }}" {% endif %}
                                     {% if field.disabled or isDisabledToggleable %}disabled="disabled"{% endif %}
                                     {% if field.placeholder %}placeholder="{{ field.placeholder|tu }}"{% endif %}

@@ -258,7 +258,6 @@ define([
 			show();
 			e.preventDefault();
 		});
-	};
-
+        };
 	return findReplace;
 });
