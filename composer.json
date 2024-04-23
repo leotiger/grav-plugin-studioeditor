@@ -5,7 +5,7 @@
   "keywords": ["translation","search"],
   "homepage": "https://github.com/leotiger/grav-plugin-studioeditor",
   "license": "MIT",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "authors": [
     {
       "name": "Uli Hake",

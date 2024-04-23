@@ -1,3 +1,9 @@
+# v1.2.1
+## 04/23/2024
+
+1. [](#bugfix)
+    * Fix editor load in new page context
+
 # v1.2.0
 ## 04/18/2024
 
